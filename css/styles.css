@@ -5,6 +5,9 @@
     --secondary-color: #FCFFE7;
     --font-primary: 'Open Sans', Arial, sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
+    --text-color: #555;
+    --detail-item-color: #555;
+    --info-item-color: #333;
 }
 
 /* Reset básico */
@@ -84,7 +87,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color);
+    color: #E0E0E0;
 }
 
 nav ul li a:focus {
@@ -152,7 +155,7 @@ header.scrolled {
 
 .cta-button:hover, 
 .cta-button:focus {
-    background-color: #E0E0E0;
+    background-color: var(--secondary-color);
     transform: scale(1.05);
 }
 
@@ -273,7 +276,7 @@ p {
 .intro-text {
     font-size: 18px;
     margin-bottom: 40px;
-    color: #555;
+    color: var(--text-color);
 }
 
 /* Container para as colunas */
@@ -301,8 +304,7 @@ p {
 }
 
 .detalhe-item p {
-    font-size: 16px;
-    color: #555;
+    color: var(--detail-item-color);
     line-height: 1.6;
 }
 
@@ -314,7 +316,7 @@ p {
 .detalhe-item ul li {
     margin: 10px 0;
     font-size: 16px;
-    color: #555;
+    color: var(--text-color);
 }
 
 /* Estilo dos ícones na seção Atendimentos */
@@ -348,7 +350,7 @@ p {
 
 /* Botão de chamada para ação */
 #cta-button {
-    background-color: #B57170;
+    background-color: var(--primary-color);
     color: white;
     padding: 15px 30px;
     border-radius: 50px;
@@ -361,7 +363,7 @@ p {
 
 #cta-button:hover, 
 #cta-button:focus {
-    background-color: #B57170;
+    background-color: var(--secondary-color);
     transform: scale(1.05);
 }
 
@@ -375,7 +377,7 @@ p {
 }
 
 #atendimentos p {
-    color: var(--primary-color);
+    color: var(--text-color);
     font-size: 20px;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -417,11 +419,11 @@ p {
 .service i {
     font-size: 40px;
     color: #8F9779;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #servicos p {
-    color: #555;
+    color: var(--text-color);
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -454,7 +456,7 @@ p {
 
 .instagram-invite {
     font-size: 18px;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -504,17 +506,8 @@ p {
 .info-item p {
     margin: 0;
     font-size: 16px;
-    color: #333;
-}
-
-.info-item a {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--info-item-color);
     transition: color 0.3s ease;
-}
-
-.info-item a:hover {
-    color: #6C9BCF;
 }
 
 #contato p {
@@ -538,7 +531,6 @@ footer {
         width: 100%;
         height: auto;
     }
-<style>
 
     .services-grid {
         grid-template-columns: 1fr;
