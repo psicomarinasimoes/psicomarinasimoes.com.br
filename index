@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Psicóloga Marina Simões - Psicoterapia para jovens e adultos neurodivergentes. Meu objetivo é proporcionar um espaço seguro e acolhedor para que adolescentes e adultos possam experienciar o mundo de acordo com suas singularidades.">
@@ -9,198 +9,199 @@
     
     <!-- Meta Tags de segurança -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https://lh5.googleusercontent.com https://lh3.googleusercontent.com; font-src 'self' https://cdnjs.cloudflare.com; frame-src 'self' https://snapwidget.com;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     
     <!-- SEO Meta Tags -->
     <meta property="og:title" content="Psicóloga Marina Simões">
     <meta property="og:description" content="Psicoterapia para jovens e adultos neurodivergentes.">
-    <meta property="og:image" content="URL_DA_IMAGEM" />
-    <meta property="og:url" content="URL_DO_SEU_SITE" />
+    <meta property="og:image" content="URL_DA_IMAGEM">
+    <meta property="og:url" content="URL_DO_SEU_SITE">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Psicóloga Marina Simões">
     <meta name="twitter:description" content="Psicoterapia para jovens e adultos neurodivergentes.">
-    <meta name="twitter:image" content="URL_DA_IMAGEM" />
+    <meta name="twitter:image" content="URL_DA_IMAGEM">
 
     <title>Psicóloga Marina Simões</title>
     <base target="_top">
     
     <!-- Links para bibliotecas externas -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
     <!-- Cabeçalho Fixo -->
     <header>
-      <div class="header-content">
-        <div class="header-text">
-          <h1>Psicóloga Marina Simões</h1>
-          <p class="crp">CRP: 08/43798</p>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Psicóloga Marina Simões</h1>
+                <p class="crp">CRP: 08/43798</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#atendimentos">Atendimentos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#atendimentos">Atendimentos</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
 
     <!-- Conteúdo da página -->
     <section id="hero" data-aos="fade-up">
-      <div class="hero-content">
-        <!-- Texto à esquerda -->
-        <div class="hero-text">
-          <h2>Psicoterapia para jovens e adultos neurodivergentes</h2>
-          <p>Meu objetivo é proporcionar um espaço seguro e acolhedor para que jovens e adultos neurodivergentes possam experienciar o mundo de acordo com suas singularidades. Acredito no direito de cada um ser quem é.</p>
-          <a href="https://wa.me/5564999626686" class="cta-button" target="_blank">Agende sua Consulta</a>
-        </div>
+        <div class="hero-content">
+            <!-- Texto à esquerda -->
+            <div class="hero-text">
+                <h2>Psicoterapia para jovens e adultos neurodivergentes</h2>
+                <p>Meu objetivo é proporcionar um espaço seguro e acolhedor para que jovens e adultos neurodivergentes possam experienciar o mundo de acordo com suas singularidades. Acredito no direito de cada um ser quem é.</p>
+                <a href="https://wa.me/5564999626686" class="cta-button" target="_blank">Agende sua Consulta</a>
+            </div>
 
-        <!-- Logo à direita -->
-        <div class="hero-logo">
-          <img src="images/logo.jpg" alt="Logo Psicóloga Marina Simões" data-aos="fade-left">
+            <!-- Logo à direita -->
+            <div class="hero-logo">
+                <img src="images/logo.jpg" alt="Logo Psicóloga Marina Simões">
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Seção Sobre Mim -->
     <section id="sobre" data-aos="fade-up">
-      <div class="about-content">
-        <img src="images/foto.jpg" alt="Foto da Psicóloga Marina Simões" data-aos="fade-right" />
-        <div class="about-text">
-          <h2>Sobre Mim</h2>
-          <p>Olá, meu nome é <strong>Marina Simões</strong>, sou Graduada em Psicologia pela <strong>Universidade Federal de Goiás (UFG)</strong> e Pós-Graduada em Psicologia Clínica. Atualmente, sou Mestranda do Programa de Pós-Graduação em Análise do Comportamento da <strong>Universidade Estadual de Londrina (UEL)</strong> e atuo como Psicóloga Clínica em consultório particular, com foco no atendimento de <strong>adultos neurodivergentes</strong>.</p>
-          <p>Meu objetivo é proporcionar um atendimento <strong>acolhedor e especializado</strong>, visando melhorar a qualidade de vida dos meus pacientes. Acredito que cada pessoa é única, e meu objetivo é ajudá-la a encontrar estratégias para lidar com os desafios do dia a dia.</p>
+        <div class="about-content">
+            <img src="images/foto.jpg" alt="Foto da Psicóloga Marina Simões">
+            <div class="about-text">
+                <h2>Sobre Mim</h2>
+                <p>Olá, meu nome é <strong>Marina Simões</strong>, sou Graduada em Psicologia pela <strong>Universidade Federal de Goiás (UFG)</strong> e Pós-Graduada em Psicologia Clínica. Atualmente, sou Mestranda do Programa de Pós-Graduação em Análise do Comportamento da <strong>Universidade Estadual de Londrina (UEL)</strong> e atuo como Psicóloga Clínica em consultório particular, com foco no atendimento de <strong>adultos neurodivergentes</strong>.</p>
+                <p>Meu objetivo é proporcionar um atendimento <strong>acolhedor e especializado</strong>, visando melhorar a qualidade de vida dos meus pacientes. Acredito que cada pessoa é única, e meu objetivo é ajudá-la a encontrar estratégias para lidar com os desafios do dia a dia.</p>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Seção Como Funcionam os Atendimentos -->
     <section id="atendimentos" data-aos="fade-up">
-      <div class="atendimentos-content">
-        <h2>Como Funcionam os Atendimentos</h2>
-        <p class="intro-text"></p>
+        <div class="atendimentos-content">
+            <h2>Como Funcionam os Atendimentos</h2>
+            <p class="intro-text"></p>
 
-        <div class="detalhes-grid"> <!-- Container para as colunas -->
-          <!-- Primeira Consulta -->
-          <div class="detalhe-item" data-aos="fade-up">
-            <i class="fas fa-handshake icone-destaque icone-1"></i> <!-- Ícone 1 -->
-            <h3>Primeira Consulta</h3>
-            <p>Na primeira sessão, realizamos uma avaliação inicial para traçar um <strong>plano de terapia personalizado</strong>, considerando suas particularidades.</p>
-          </div>
+            <div class="detalhes-grid">
+                <!-- Primeira Consulta -->
+                <div class="detalhe-item" data-aos="fade-up">
+                    <i class="fas fa-handshake icone-destaque icone-1"></i>
+                    <h3>Primeira Consulta</h3>
+                    <p>Na primeira sessão, realizamos uma avaliação inicial para traçar um <strong>plano de terapia personalizado</strong>, considerando suas particularidades.</p>
+                </div>
 
-          <!-- Frequência e Duração -->
-          <div class="detalhe-item" data-aos="fade-up">
-            <i class="fas fa-clock icone-destaque icone-2"></i> <!-- Ícone 2 -->
-            <h3>Frequência e Duração</h3>
-            <p>Sessões de <strong>50 minutos</strong>, realizadas <strong>semanalmente</strong>, para garantir um progresso consistente e um acompanhamento próximo.</p>
-          </div>
+                <!-- Frequência e Duração -->
+                <div class="detalhe-item" data-aos="fade-up">
+                    <i class="fas fa-clock icone-destaque icone-2"></i>
+                    <h3>Frequência e Duração</h3>
+                    <p>Sessões de <strong>50 minutos</strong>, realizadas <strong>semanalmente</strong>, para garantir um progresso consistente e um acompanhamento próximo.</p>
+                </div>
 
-          <!-- Abordagem Terapêutica -->
-          <div class="detalhe-item" data-aos="fade-up">
-            <i class="fas fa-brain icone-destaque icone-3"></i> <!-- Ícone 3 -->
-            <h3>Abordagem Terapêutica</h3>
-            <p>Utilizo a <strong>Psicoterapia Comportamental Contextual</strong>, integrando técnicas da <strong>DBT</strong> e <strong>ACT</strong> para ajudá-lo(a) a:</p>
-            <ul>
-              <li><i class="fas fa-heart icone-lista"></i> Regular emoções de forma saudável.</li>
-              <li><i class="fas fa-tools icone-lista"></i> Desenvolver habilidades socioemocionais.</li>
-              <li><i class="fas fa-balance-scale icone-lista"></i> Aprender a enfrentar desafios, e ao mesmo tempo, fazer coisas que são importantes para você.</li>
-              <li><i class="fas fa-lightbulb icone-lista"></i> Explorar o autoconhecimento com mais aceitação e gentileza consigo mesmo.</li>
-            </ul>
-          </div>
+                <!-- Abordagem Terapêutica -->
+                <div class="detalhe-item" data-aos="fade-up">
+                    <i class="fas fa-brain icone-destaque icone-3"></i>
+                    <h3>Abordagem Terapêutica</h3>
+                    <p>Utilizo a <strong>Psicoterapia Comportamental Contextual</strong>, integrando técnicas da <strong>DBT</strong> e <strong>ACT</strong> para ajudá-lo(a) a:</p>
+                    <ul>
+                        <li><i class="fas fa-heart icone-lista"></i> Regular emoções de forma saudável.</li>
+                        <li><i class="fas fa-tools icone-lista"></i> Desenvolver habilidades socioemocionais.</li>
+                        <li><i class="fas fa-balance-scale icone-lista"></i> Aprender a enfrentar desafios, e ao mesmo tempo, fazer coisas que são importantes para você.</li>
+                        <li><i class="fas fa-lightbulb icone-lista"></i> Explorar o autoconhecimento com mais aceitação e gentileza consigo mesmo.</li>
+                    </ul>
+                </div>
 
-          <!-- Perspectiva Neuroafirmativa -->
-          <div class="detalhe-item" data-aos="fade-up">
-            <i class="fas fa-users icone-destaque icone-4"></i> <!-- Ícone 4 -->
-            <h3>Perspectiva Neuroafirmativa</h3>
-            <p>Minha prática acolhe a diversidade, apoiando você a desenvolver estratégias que respeitem sua forma única de ser e estar no mundo.</p>
-          </div>
+                <!-- Perspectiva Neuroafirmativa -->
+                <div class="detalhe-item" data-aos="fade-up">
+                    <i class="fas fa-users icone-destaque icone-4"></i>
+                    <h3>Perspectiva Neuroafirmativa</h3>
+                    <p>Minha prática acolhe a diversidade, apoiando você a desenvolver estratégias que respeitem sua forma única de ser e estar no mundo.</p>
+                </div>
+            </div>
+
+            <!-- Botão de ação -->
+            <p class="cta-text">
+                <a href="https://wa.me/5564999626686" id="cta-button" target="_blank">Entre em contato e agende sua primeira consulta!</a>
+            </p>
         </div>
-
-        <!-- Botão de ação -->
-        <p class="cta-text">
-          <a href="https://wa.me/5564999626686" id="cta-button" target="_blank">Entre em contato e agende sua primeira consulta!</a>
-        </p>
-      </div>
     </section>
 
     <!-- Seção Serviços -->
     <section id="servicos" data-aos="fade-up">
-      <div class="services-content">
-        <h2>Serviços</h2>
-        <div class="services-grid">
-          <div class="service" data-aos="fade-up">
-            <i class="fas fa-brain icone-servico-1"></i> <!-- Ícone 1 -->
-            <p>Psicoterapia individual.</p>
-          </div>
-          <div class="service" data-aos="fade-up">
-            <i class="fas fa-heart icone-servico-2"></i> <!-- Ícone 2 -->
-            <p>Grupos de apoio.</p>
-          </div>
-          <div class="service" data-aos="fade-up">
-            <i class="fas fa-lightbulb icone-servico-3"></i> <!-- Ícone 3 -->
-            <p>Treinos em habilidades sociais em grupo.</p>
-          </div>
+        <div class="services-content">
+            <h2>Serviços</h2>
+            <div class="services-grid">
+                <div class="service" data-aos="fade-up">
+                    <i class="fas fa-brain icone-servico-1"></i>
+                    <p>Psicoterapia individual.</p>
+                </div>
+                <div class="service" data-aos="fade-up">
+                    <i class="fas fa-heart icone-servico-2"></i>
+                    <p>Grupos de apoio.</p>
+                </div>
+                <div class="service" data-aos="fade-up">
+                    <i class="fas fa-lightbulb icone-servico-3"></i>
+                    <p>Treinos em habilidades sociais em grupo.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Seção Instagram -->
     <section id="instagram" data-aos="fade-up">
-      <div class="instagram-content">
-        <a href="https://www.instagram.com/psimarinasimoes/" target="_blank" rel="noopener noreferrer" class="cta-button">
-          <i class="fab fa-instagram"></i> Me siga no Instagram
-        </a>
-        <!-- Widget do SnapWidget -->
-        <div class="instagram-feed">
-          <iframe 
-            src="https://snapwidget.com/embed/1090809" 
-            class="snapwidget-widget" 
-            allowtransparency="true" 
-            frameborder="0" 
-            scrolling="no" 
-            style="border:none; overflow:hidden; width:100%; height:400px;" 
-            title="Insta">
-          </iframe>
+        <div class="instagram-content">
+            <a href="https://www.instagram.com/psimarinasimoes/" target="_blank" rel="noopener noreferrer" class="cta-button">
+                <i class="fab fa-instagram"></i> Me siga no Instagram
+            </a>
+            <!-- Widget do SnapWidget -->
+            <div class="instagram-feed">
+                <iframe 
+                    src="https://snapwidget.com/embed/1090809" 
+                    class="snapwidget-widget" 
+                    allowtransparency="true" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    style="border:none; overflow:hidden; width:100%; height:400px;" 
+                    title="Insta">
+                </iframe>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Seção Contato -->
     <section id="contato" data-aos="fade-up">
-      <div class="contact-content">
-        <h2>Contato</h2>
-        <div class="contact-info">
-          <div class="info-item">
-            <i class="fas fa-phone"></i>
-            <p><a href="https://wa.me/5564999626686" target="_blank">(64) 99962-6686</a></p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <p>psicologia.marinasimoes@gmail.com</p>
-          </div>
+        <div class="contact-content">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p><a href="https://wa.me/5564999626686" target="_blank">(64) 99962-6686</a></p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>psicologia.marinasimoes@gmail.com</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
-      <p>&copy; 2025 Psicóloga Marina Simões. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Psicóloga Marina Simões. Todos os direitos reservados.</p>
     </footer>
 
     <!-- AOS JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        AOS.init({
-          duration: 1000,
-          once: true,
+        // Inicializa a AOS após o carregamento da página
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
         });
-      });
     </script>
-  </body>
+</body>
 </html>
