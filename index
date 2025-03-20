@@ -20,7 +20,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Psicóloga Marina Simões">
     <meta name="twitter:description" content="Psicoterapia para jovens e adultos neurodivergentes.">
-    <meta name="twitter:image" content="URL_DA_IMAGEM">
 
     <title>Psicóloga Marina Simões</title>
     <base target="_top">
@@ -28,7 +27,7 @@
     <!-- Links para bibliotecas externas -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="psicomarinasimoes.com.br/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
