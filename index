@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Psicóloga Marina Simões - Psicoterapia para jovens e adultos neurodivergentes. Meu objetivo é proporcionar um espaço seguro e acolhedor para que adolescentes e adultos neurodivergentes possam experienciar o mundo de acordo com suas singularidades. Acredito no direito de cada indivíduo de ocupar seu lugar no mundo, desenvolvendo habilidades e fortalecendo sua autonomia.">
-  <meta name="keywords" content="psicóloga, neurodivergentes, terapia, autoconhecimento, saúde mental">
-  <meta name="author" content="Psicóloga Marina Simões">
-  
-  <!-- Meta Tags de segurança -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com;">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  
-  <title>Psicóloga Marina Simões</title>
-  <base target="_top">
-  
-  <!-- Inclui o arquivo CSS como recurso estático -->
-  <?!= include('estilos'); ?>
-  
-  <!-- Links para bibliotecas externas -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Psicóloga Marina Simões - Psicoterapia para jovens e adultos neurodivergentes. Meu objetivo é proporcionar um espaço seguro e acolhedor para que adolescentes e adultos possam experienciar o mundo de acordo com suas singularidades.">
+    <meta name="keywords" content="psicóloga, neurodivergentes, terapia, autoconhecimento, saúde mental">
+    <meta name="author" content="Psicóloga Marina Simões">
+    
+    <!-- Meta Tags de segurança -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Psicóloga Marina Simões">
+    <meta property="og:description" content="Psicoterapia para jovens e adultos neurodivergentes.">
+    <meta property="og:image" content="URL_DA_IMAGEM">
+    <meta property="og:url" content="URL_DO_SEU_SITE">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Psicóloga Marina Simões">
+    <meta name="twitter:description" content="Psicoterapia para jovens e adultos neurodivergentes.">
+    <meta name="twitter:image" content="URL_DA_IMAGEM">
+
+    <title>Psicóloga Marina Simões</title>
+    <base target="_top">
+    
+    <!-- Inclui o arquivo CSS como recurso estático -->
+    <?php include('estilos.php'); ?>
+    
+    <!-- Links para bibliotecas externas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  </head>
   <body>
 
     <!-- Cabeçalho Fixo -->
@@ -48,14 +59,13 @@
         <!-- Texto à esquerda -->
         <div class="hero-text">
           <h2>Psicoterapia para jovens e adultos neurodivergentes</h2>
-          <p>Meu objetivo é proporcionar um espaço seguro e acolhedor para que jovens e adultos neurodivergentes possam experienciar o mundo de acordo com suas singularidades. Acredito no direito de cada indivíduo de ocupar seu lugar no mundo, desenvolvendo habilidades e fortalecendo sua autonomia.</p>
+          <p>Meu objetivo é proporcionar um espaço seguro e acolhedor para que jovens e adultos neurodivergentes possam experienciar o mundo de acordo com suas singularidades. Acredito no direito de cada um ser quem é.</p>
           <a href="https://wa.me/5564999626686" class="cta-button" target="_blank">Agende sua Consulta</a>
         </div>
 
         <!-- Logo à direita -->
         <div class="hero-logo">
-          <img src="https://lh5.googleusercontent.com/p/AF1QipP3Y7IxSsP0tLD9qt4xILwp9O3KXqe0UB8QIvWP=w600-h650-p-k-no" 
-               alt="Logo Psicóloga Marina Simões">
+          <img src="https://lh5.googleusercontent.com/p/AF1QipP3Y7IxSsP0tLD9qt4xILwp9O3KXqe0UB8QIvWP=w600-h650-p-k-no" alt="Logo Psicóloga Marina Simões">
         </div>
       </div>
     </section>
@@ -63,17 +73,11 @@
     <!-- Seção Sobre Mim -->
     <section id="sobre">
       <div class="about-content">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipPF4Di5xGoM07G-nH_uRScjUT2VbzuGQukW3n1Q=s680-w680-h510" 
-             alt="Foto da Psicóloga Marina Simões">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipPF4Di5xGoM07G-nH_uRScjUT2VbzuGQukW3n1Q=s680-w680-h510" alt="Foto da Psicóloga Marina Simões">
         <div class="about-text">
           <h2>Sobre Mim</h2>
-          <p>Olá, meu nome é <strong>Marina Simões</strong>, sou Graduada em Psicologia pela 
-            <strong>Universidade Federal de Goiás (UFG)</strong> e Pós-Graduada em Psicologia Clínica. 
-            Atualmente, sou Mestranda do Programa de Pós-Graduação em Análise do Comportamento da 
-            <strong>Universidade Estadual de Londrina (UEL)</strong> e atuo como Psicóloga Clínica em 
-            consultório particular, com foco no atendimento de <strong>adultos neurodivergentes</strong>.</p>
-          <p>Meu objetivo é proporcionar um atendimento <strong>acolhedor e especializado</strong>, 
-            visando melhorar a qualidade de vida dos meus pacientes. Acredito que cada pessoa é única, e meu objetivo é ajudá-la a encontrar estratégias para lidar com os desafios do dia a dia, promovam autoconhecimento, aprimorem suas capacidades de comunicação e regulação emocional.</p>
+          <p>Olá, meu nome é <strong>Marina Simões</strong>, sou Graduada em Psicologia pela <strong>Universidade Federal de Goiás (UFG)</strong> e Pós-Graduada em Psicologia Clínica. Atualmente, sou Mestranda do Programa de Pós-Graduação em Análise do Comportamento da <strong>Universidade Estadual de Londrina (UEL)</strong> e atuo como Psicóloga Clínica em consultório particular, com foco no atendimento de <strong>adultos neurodivergentes</strong>.</p>
+          <p>Meu objetivo é proporcionar um atendimento <strong>acolhedor e especializado</strong>, visando melhorar a qualidade de vida dos meus pacientes. Acredito que cada pessoa é única, e meu objetivo é ajudá-la a encontrar estratégias para lidar com os desafios do dia a dia.</p>
         </div>
       </div>
     </section>
@@ -107,7 +111,7 @@
             <ul>
               <li><i class="fas fa-heart icone-lista"></i> Regular emoções de forma saudável.</li>
               <li><i class="fas fa-tools icone-lista"></i> Desenvolver habilidades socioemocionais.</li>
-              <li><i class="fas fa-balance-scale icone-lista"></i> Aprender a enfrentar desafios, e ao mesmo tempo, fazer coisas que são importantes para você</li>
+              <li><i class="fas fa-balance-scale icone-lista"></i> Aprender a enfrentar desafios, e ao mesmo tempo, fazer coisas que são importantes para você.</li>
               <li><i class="fas fa-lightbulb icone-lista"></i> Explorar o autoconhecimento com mais aceitação e gentileza consigo mesmo.</li>
             </ul>
           </div>
@@ -192,7 +196,7 @@
     </footer>
 
     <!-- AOS JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
         duration: 1000,
