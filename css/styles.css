@@ -3,7 +3,7 @@
 :root {
     --primary-color: #6F8FAF;
     --secondary-color: #FCFFE7;
-    --font-primary: 'Open Sans', Arial, sans-serif;
+    --font-primary: 'Open Sans', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
     --text-color: #555;
     --detail-item-color: #555;
@@ -30,10 +30,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    margin: 0px;
     background-color: rgba(111, 143, 175, 1.0);
     color: var(--secondary-color);
-    padding: 20px 20px;
+    padding: 20px;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -42,7 +41,6 @@ header {
     transition: background 0.3s ease, padding 0.3s ease;
 }
 
-/* Container do conteúdo do cabeçalho */
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -52,7 +50,6 @@ header {
     margin: 0 auto;
 }
 
-/* Texto do cabeçalho (deslocado para a esquerda) */
 .header-text {
     text-align: left;
 }
@@ -90,11 +87,6 @@ nav ul li a:hover {
     color: #E0E0E0;
 }
 
-nav ul li a:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
-}
-
 /* Efeito ao rolar a página */
 header.scrolled {
     background: var(--primary-color);
@@ -120,7 +112,6 @@ header.scrolled {
     gap: 20px;
 }
 
-/* Estilo do texto à esquerda */
 .hero-text {
     flex: 1;
     max-width: 600px;
@@ -140,7 +131,6 @@ header.scrolled {
     margin-bottom: 20px;
 }
 
-/* Estilo do botão */
 .cta-button {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -153,13 +143,11 @@ header.scrolled {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cta-button:hover, 
-.cta-button:focus {
-    background-color: var(--secondary-color);
+.cta-button:hover {
+    background-color: #E0E0E0;
     transform: scale(1.05);
 }
 
-/* Estilo da logo à direita */
 .hero-logo {
     flex: 1;
     max-width: 350px;
@@ -170,7 +158,7 @@ header.scrolled {
     width: 100%;
     height: auto;
     border-radius: 0px;
-    box-shadow: 0px rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsividade para telas menores */
@@ -223,7 +211,6 @@ p {
     padding: 60px 20px;
 }
 
-/* Estilo para o texto da seção Sobre Mim */
 #sobre p {
     color: var(--secondary-color);
     font-size: 20px;
@@ -260,7 +247,7 @@ p {
     font-size: 32px;
 }
 
-/* Estilo da seção Atendimentos */
+/* Seção Atendimentos */
 #atendimentos {
     background-color: var(--secondary-color);
     padding: 60px 20px;
@@ -279,7 +266,6 @@ p {
     color: var(--text-color);
 }
 
-/* Container para as colunas */
 .detalhes-grid {
     display: flex;
     flex-wrap: wrap;
@@ -287,7 +273,6 @@ p {
     justify-content: center;
 }
 
-/* Estilo de cada item (coluna) */
 .detalhe-item {
     flex: 1 1 calc(50% - 20px);
     background-color: white;
@@ -319,13 +304,11 @@ p {
     color: var(--text-color);
 }
 
-/* Estilo dos ícones na seção Atendimentos */
 .icone-destaque {
     font-size: 80px;
     margin-bottom: 20px;
 }
 
-/* Cores personalizadas para os ícones */
 .icone-1 {
     color: #B57170;
 }
@@ -348,9 +331,8 @@ p {
     margin-right: 10px;
 }
 
-/* Botão de chamada para ação */
 #cta-button {
-    background-color: var(--primary-color);
+    background-color: #B57170;
     color: white;
     padding: 15px 30px;
     border-radius: 50px;
@@ -361,13 +343,11 @@ p {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#cta-button:hover, 
-#cta-button:focus {
-    background-color: var(--secondary-color);
+#cta-button:hover {
+    background-color: #A55A5A;
     transform: scale(1.05);
 }
 
-/* Estilo para o texto da seção Atendimentos */
 #atendimentos h2 {
     font-family: var(--font-secondary);
     font-size: 32px;
@@ -419,7 +399,7 @@ p {
 .service i {
     font-size: 40px;
     color: #8F9779;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #servicos p {
@@ -507,7 +487,6 @@ p {
     margin: 0;
     font-size: 16px;
     color: var(--info-item-color);
-    transition: color 0.3s ease;
 }
 
 #contato p {
