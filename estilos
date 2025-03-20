@@ -1,0 +1,535 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #6F8FAF;
+    color: #FCFFE7;
+    line-height: 1.6;
+  }
+
+  /* Estilo do cabeçalho */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0px;
+    background-color: rgba(111, 143, 175, 1.0);
+    color: #FCFFE7;
+    padding: 20px 20px; /* Padding maior para aumentar a seção */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease, padding 0.3s ease; /* Transição suave */
+  }
+
+  /* Container do conteúdo do cabeçalho */
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Texto do cabeçalho (deslocado para a esquerda) */
+  .header-text {
+    text-align: left;
+  }
+
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Tamanho maior para o título */
+    margin: 0;
+  }
+
+  header .crp {
+    font-size: 14px; /* Tamanho maior para o CRP */
+    margin: 5px 0 0 0;
+    font-weight: 300;
+    color: #FCFFE7
+  }
+
+  /* Navegação */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    color: #FCFFE7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #FCFFE7;
+  }
+
+  /* Efeito ao rolar a página */
+  header.scrolled {
+    background: #6F8FAF; /* Fundo sólido ao rolar */
+    padding: 10px 40px; /* Padding reduzido ao rolar */
+  }
+
+  /* Estilo da seção Hero */
+#hero {
+  background-color: #FCFFE7; /* Cor de fundo da seção */
+  padding: 40px 20px; /* Reduzi de 60px para 40px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Reduzi a margem superior */
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px; /* Reduzi de 40px para 20px */
+}
+
+/* Estilo do texto à esquerda */
+.hero-text {
+  flex: 1;
+  max-width: 600px; /* Largura máxima do texto */
+  text-align: left;
+}
+
+.hero-text h2 {
+  font-size: 32px;
+  color: #6F8FAF;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #6F8FAF;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Estilo do botão */
+.cta-button {
+  background-color: #6F8FAF; /* Cor do botão */
+  color: #FCFFE7; /* Cor do texto do botão */
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #E0E0E0; /* Cor do botão ao passar o mouse */
+  transform: scale(1.05);
+}
+
+/* Estilo da logo à direita */
+.hero-logo {
+  flex: 1;
+  max-width: 350px; /* Diminuí de 400px para 350px */
+  text-align: center;
+}
+
+.hero-logo img {
+  width: 100%; /* A logo se ajusta ao tamanho do container */
+  height: auto;
+  border-radius: 0px; /* Bordas arredondadas (opcional) */
+  box-shadow: 0px rgba(0, 0, 0, 0); /* Sombra suave */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Empilha texto e logo verticalmente */
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-logo {
+    margin-top: 20px;
+  }
+}
+
+/* Seções Fluídas */
+section {
+  padding: 60px 20px;
+}
+
+#hero h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  color: #FCFFE7;
+  margin: 50px;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.8;
+  color: #6F8FAF;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o texto da seção Hero */
+#hero p {
+  color: #6F8FAF; /* branco */
+  font-size: 22px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+  /* Seção Sobre Mim */
+  #sobre {
+    background-color: #6F8FAF; /* Cor de fundo da seção */
+    padding: 60px 20px; /* Espaçamento interno */
+  }
+
+  /* Estilo para o texto da seção Sobre Mim */
+  #sobre p {
+    color: #FCFFE7;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+
+  .about-text {
+    flex: 1;
+    color: #FCFFE7; /* Cor do texto */
+    margin-bottom: 20px;
+  }
+
+  .about-text h2 {
+    text-align: center;
+    color: #FCFFE7; /* Cor do título */
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+
+  /* Estilo da seção Atendimentos */
+  #atendimentos {
+    background-color: #FCFFE7; /* Cor de fundo suave */
+    padding: 60px 20px;
+    padding-bottom: 120px; /* Adicionei mais espaço na parte inferior */
+    text-align: center;
+  }
+
+  .atendimentos-content {
+    max-width: 1200px; /* Aumentei a largura máxima para acomodar as colunas */
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+  }
+
+  /* Container para as colunas */
+  .detalhes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre as colunas */
+    justify-content: center;
+  }
+
+  /* Estilo de cada item (coluna) */
+  .detalhe-item {
+    flex: 1 1 calc(50% - 20px); /* Cada item ocupa 50% do espaço, menos o gap */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .detalhe-item h3 {
+    font-size: 24px;
+    color: #6F8FAF; /* Cor do título */
+    margin: 20px 0 10px;
+  }
+
+  .detalhe-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .detalhe-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .detalhe-item ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
+
+  /* Estilo dos ícones na seção Atendimentos */
+  .icone-destaque {
+    font-size: 80px; /* Aumentei o tamanho dos ícones */
+    margin-bottom: 20px;
+  } /* Faltava fechar essa chave */
+
+  /* Cores personalizadas para os ícones */
+  .icone-1 {
+    color: #B57170; /* Vermelho suave */
+  }
+
+  .icone-2 {
+    color: #6F8FAF; /* Azul suave */
+  }
+
+  .icone-3 {
+    color: #8F9779; /* Verde suave */
+  }
+
+  .icone-4 {
+    color: #C7ACB2; /* Rosa suave */
+  }
+
+  .icone-lista {
+    font-size: 16px;
+    color: #8F9779; /* Cor dos ícones da lista */
+    margin-right: 10px;
+  }
+
+  /* Botão de chamada para ação */
+  #cta-button {
+    background-color: #B57170;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 120px; /* Aumentei a margem superior */
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  #cta-button:hover {
+    background-color: #B57170;
+    transform: scale(1.05);
+  }
+
+  /* Estilo para o texto da seção Atendimentos */
+  #atendimentos h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    color: #6F8FAF; /* Mudei para uma cor que contrasta melhor */
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  /* Estilo para o texto da seção Atendimentos */
+  #atendimentos p {
+    color: #6F8FAF; /* azul suave */
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  /* Seção Serviços */
+  #servicos {
+    background-color: #FCFFE7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #6F8FAF;
+  }
+
+  .services-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .service {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .service:hover {
+    transform: translateY(-10px);
+  }
+
+  .service i {
+    font-size: 40px;
+    color: #8F9779;
+    margin-bottom: 10px;
+  }
+
+  /* Estilo para o texto da seção Serviços */
+  #servicos p {
+    color: #555; /* Cor mais escura para melhor contraste */
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  #servicos h2 {
+    color: #6F8FAF; /* azul suave */
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .detalhe-item {
+      flex: 1 1 100%; /* Em telas pequenas, cada item ocupa 100% da largura */
+    }
+  }
+
+  /* Seção Instagram */
+  #instagram {
+    background-color: #6F8FAF;
+  }
+
+  .instagram-content {
+    text-align: center;
+  }
+
+  .instagram-invite {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .instagram-feed {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .instagram-feed iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+  }
+
+  /* Seção Contato */
+  #contato {
+    background-color: #FCFFE7;
+    color: white;
+  }
+
+  .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-info {
+    background: rgba(252, 255, 231, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .info-item {
+    margin-bottom: 15px;
+  }
+
+  .info-item i {
+    font-size: 20px;
+    color: #6F8FAF;
+    margin-right: 10px;
+  }
+
+  .info-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .info-item a {
+    color: #6F8FAF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .info-item a:hover {
+    color: #6C9BCF;
+  }
+
+  /* Estilo para o texto da seção Contato */
+  #contato p {
+    color: #6F8FAF; /* Azul suave */
+  }
+
+  /* Rodapé */
+  footer {
+    background-color: #6F8FAF;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-content img {
+      width: 100%;
+      height: auto;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
