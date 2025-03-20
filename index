@@ -26,8 +26,81 @@
     <title>Psicóloga Marina Simões</title>
     <base target="_top">
     
-    <!-- Inclui o arquivo CSS como recurso estático -->
-    <link rel="stylesheet" href="estilos.css">
+    <!-- Inclui o CSS diretamente no HTML -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .header-text h1 {
+        margin: 0;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      nav ul li {
+        margin-left: 20px;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .hero-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .hero-text {
+        max-width: 600px;
+      }
+      .hero-logo img {
+        max-width: 100%;
+        height: auto;
+      }
+      .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .about-content, .atendimentos-content, .services-content, .instagram-content, .contact-content {
+        padding: 20px;
+        background-color: #fff;
+        margin: 20px 0;
+      }
+      .about-content img, .about-content .about-text, .detalhes-grid, .services-grid, .instagram-feed, .contact-info {
+        margin: 20px 0;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
     
     <!-- Links para bibliotecas externas -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
