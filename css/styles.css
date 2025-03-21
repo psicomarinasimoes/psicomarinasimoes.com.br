@@ -174,7 +174,6 @@ header.scrolled {
 
     .hero-logo {
         margin-top: 20px;
-    }
 }
 
 /* Seções Fluídas */
@@ -420,8 +419,9 @@ p {
         flex: 1 1 100%;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -514,3 +514,4 @@ footer {
     .services-grid {
         grid-template-columns: 1fr;
     }
+}
