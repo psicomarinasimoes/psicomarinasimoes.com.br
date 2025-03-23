@@ -5,10 +5,10 @@
     --secondary-color: #FBFBFB;
     --terciary-color: #3F7D58;
     --quaternary-color:#B57170;
-    --quinary-color:#3C3D37;
+    --quinary-color:#666666;
     --font-primary: 'Open Sans', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
-    --text-color: #555;
+    --text-color: #666666;
     --detail-item-color: #555;
     --info-item-color: #333;
 }
@@ -59,15 +59,15 @@ header {
 
 header h1 {
     font-family: var(--font-secondary);
-    font-size: 18px; /* Aumentei o tamanho */
-    font-weight: 600; /* Deixei mais grosso */
+    font-size: 18px;
+    font-weight: 600;
     margin: 0;
 }
 
 header .crp {
-    font-size: 13px; /* Aumentei o tamanho */
+    font-size: 13px;
     margin: 2px 0 0 0;
-    font-weight: 400; /* Peso normal */
+    font-weight: 400;
     color: var(--secondary-color);
 }
 
@@ -83,8 +83,8 @@ nav ul {
 nav ul li a {
     color: var(--secondary-color);
     text-decoration: none;
-    font-size: 16px; /* Aumentei o tamanho */
-    font-weight: 600; /* Deixei mais grosso */
+    font-size: 16px;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -125,8 +125,8 @@ header.scrolled {
 
 .hero-text h2 {
     font-family: var(--font-primary);
-    font-size: 40px; /* Aumentei o tamanho */
-    font-weight: 700; /* Deixei mais grosso */
+    font-size: 40px;
+    font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 20px;
     margin-top: 40px;
@@ -135,8 +135,8 @@ header.scrolled {
 
 .hero-text p {
     font-family: var(--font-secondary);
-    font-size: 20px; /* Reduzi o tamanho para destacar o título */
-    font-weight: 500; /* Peso normal */
+    font-size: 20px;
+    font-weight: 500;
     color: var(--quaternary-color);
     line-height: 1.6;
     margin-bottom: 20px;
@@ -163,9 +163,9 @@ header.scrolled {
 /* Estilo para o GIF da logo */
 .hero-logo img {
     width: 100%;
-    max-width: 400px; /* Ajuste conforme necessário */
+    max-width: 400px;
     height: auto;
-    border-radius: 10px; /* Adicione bordas arredondadas se desejar */
+    border-radius: 0px;
 }
 
 /* Seção Sobre Mim */
@@ -198,8 +198,8 @@ header.scrolled {
 
 .about-text h2 {
     font-family: var(--font-primary);
-    font-size: 30px; /* Aumentei o tamanho */
-    font-weight: 700; /* Deixei mais grosso */
+    font-size: 30px;
+    font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 30px;
     text-align: center;
@@ -207,8 +207,8 @@ header.scrolled {
 
 .about-text p {
     font-family: var(--font-secondary);
-    font-size: 22px; /* Reduzi o tamanho para destacar o título */
-    font-weight: 500; /* Peso normal */
+    font-size: 22px;
+    font-weight: 500;
     color: var(--quinary-color);
     line-height: 1.8;
     margin-bottom: 20px;
