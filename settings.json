@@ -1,0 +1,28 @@
+{
+    // Sets the root directory for the Live Server extension
+    "liveServer.settings.root": "/",
+    
+    // Automatically formats the document when saving
+    "editor.formatOnSave": true,
+    
+    // Automatically saves files after a delay
+    "files.autoSave": "afterDelay",
+    
+    // Delay in milliseconds before auto-saving files
+    "files.autoSaveDelay": 1000,
+    
+    // Automatically fixes ESLint and Stylelint issues on save
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    
+    // Disables validation for CSS files
+    "css.validate": false,
+    
+    // Disables validation for SCSS files
+    "scss.validate": false,
+    
+    // Disables validation for LESS files
+    "less.validate": false
+}
