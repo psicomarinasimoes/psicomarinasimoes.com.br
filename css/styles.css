@@ -418,6 +418,7 @@ header.scrolled {
 }
 
 #cta-button {
+    display: inline-block;
     background-color: #B57170;
     color: white;
     padding: 20px 30px;
@@ -434,6 +435,16 @@ header.scrolled {
     transform: scale(1.05);
     align-items: center;
     margin-top: 120px;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .cta-button {
+        width: 100%; /* Ocupa a largura total */
+        text-align: center; /* Centraliza o texto */
+        font-size: 18px; /* Aumenta o tamanho da fonte */
+        padding: 15px 20px; /* Aumenta o padding */
+    }
 }
 
 /* Seção Serviços */
