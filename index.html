@@ -52,7 +52,10 @@
         <p class="crp">CRP: 08/43798</p>
       </div>
       <nav>
-        <ul>
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <span class="menu-icon"></span>
+        </button>
+        <ul class="nav-links">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#atendimentos">Atendimentos</a></li>
           <li><a href="#servicos">Serviços</a></li>
@@ -61,22 +64,19 @@
       </nav>
     </div>
   </header>
-
-  <!-- Conteúdo da página -->
+  
   <section id="hero">
     <div class="hero-content">
-      <!-- Texto à esquerda -->
       <div class="hero-text">
         <h2>Psicoterapia para jovens e adultos neurodivergentes</h2>
         <p>Meu objetivo é proporcionar um espaço seguro e acolhedor para que jovens e adultos neurodivergentes possam
           experienciar o mundo de acordo com suas singularidades. Acredito no direito de cada um ser quem é.</p>
         <a href="https://wa.me/5564999626686" class="cta-button" target="_blank">Agende sua Consulta</a>
       </div>
-
-<!-- Logo à direita -->
-<div class="hero-logo">
-  <img src="./images/logo.gif" alt="Logo animada da Psicóloga Marina Simões">
-</div>
+      <div class="hero-logo">
+        <img src="./images/logo.gif" alt="Logo animada da Psicóloga Marina Simões">
+      </div>
+    </div>
   </section>
 
   <!-- Seção Sobre Mim -->
@@ -215,16 +215,44 @@
     <p>&copy; 2025 Psicóloga Marina Simões. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- AOS JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    });
-  </script>
-</body>
+   <!-- AOS JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   <script>
+     document.addEventListener("DOMContentLoaded", function () {
+       // Inicializa a biblioteca AOS (Animate On Scroll)
+       AOS.init({
+         duration: 1000,
+         once: true,
+       });
+ 
+       // Seleciona o botão de toggle do menu
+       const menuToggle = document.querySelector('.menu-toggle');
+       // Seleciona os links de navegação
+       const navLinks = document.querySelector('.nav-links');
+ 
+       // Verifica se os elementos existem antes de adicionar event listeners
+       if (menuToggle && navLinks) {
+         // Adiciona um evento de clique ao botão de toggle do menu
+         menuToggle.addEventListener('click', () => {
+           // Alterna a classe 'active' nos links de navegação
+           navLinks.classList.toggle('active');
+           // Alterna a classe 'active' no botão do menu (para animar o ícone)
+           menuToggle.classList.toggle('active');
+         });
+ 
+         // Fecha o menu ao clicar em um link (opcional)
+         const navItems = document.querySelectorAll('.nav-links a');
+         navItems.forEach(item => {
+           item.addEventListener('click', () => {
+             navLinks.classList.remove('active');
+             menuToggle.classList.remove('active');
+           });
+         });
+       } else {
+         console.error('Elementos do menu não encontrados!');
+       }
+     });
+   </script>
+ </body>
 
 </html>
