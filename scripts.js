@@ -32,7 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error('Elementos do menu não encontrados!');
   }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 });
+=======
+});
+>>>>>>> Stashed changes
 =======
 });
 >>>>>>> Stashed changes
