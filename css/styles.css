@@ -568,7 +568,7 @@ header.scrolled {
 }
 
 .cta-button:hover {
-    background-color: var(--quaternary-color); /* Cor do Instagram ao passar o mouse */
+    background-color: var(--primary-color); /* Cor do Instagram ao passar o mouse */
     transform: scale(1.05);
 }
 
