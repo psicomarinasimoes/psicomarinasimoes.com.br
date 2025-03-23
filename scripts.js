@@ -31,4 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
       console.error('Elementos do menu não encontrados!');
   }
+<<<<<<< Updated upstream
 });
+=======
+});
+>>>>>>> Stashed changes
