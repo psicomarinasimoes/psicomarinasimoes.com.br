@@ -489,7 +489,7 @@ header.scrolled {
 }
 
 .contact-info {
-    background: #fcffe7e6;
+    background: var(--secondary-color);
     padding: 40px;
     border-radius: 20px;
     text-align: center;
