@@ -1,12 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Inicialização imediata do AOS (sem delay)
+// Verifica se o AOS está carregado antes de inicializar
+function initializeAOS() {
+    if (typeof AOS === 'undefined') {
+        console.error('AOS não está carregado! Verifique se o script foi incluído corretamente.');
+        return false;
+    }
+    
+    // Configurações otimizadas para mobile
     AOS.init({
         duration: 800,
         once: true,
         easing: 'ease-in-out',
         offset: 100,
-        disable: ('ontouchstart' in window) && window.innerWidth < 768
+        disable: false, // Ativa em todos os dispositivos
+        startEvent: 'DOMContentLoaded'
     });
+    
+    // Fix específico para mobile
+    if ('ontouchstart' in window) {
+        setTimeout(() => {
+            AOS.refresh();
+            // Força redesenho dos elementos para ativar animações
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                el.style.opacity = '0.99';
+                setTimeout(() => { el.style.opacity = ''; }, 50);
+            });
+        }, 300);
+    }
+    
+    return true;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Inicialização do AOS com tratamento de erros
+    if (!initializeAOS()) {
+        // Fallback caso o AOS não carregue
+        safeStyleApply(document.querySelectorAll('[data-aos]'), {
+            opacity: '1',
+            transform: 'none'
+        });
+    }
 
     // 2. Verificação segura de elementos
     function safeStyleApply(elements, styles) {
@@ -63,6 +95,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) closeMenu();
+            // Atualiza animações ao redimensionar
+            if (typeof AOS !== 'undefined') AOS.refresh(); 
         });
     }
 
@@ -87,8 +121,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Garantia de carregamento
+// Garantia de carregamento com refresh das animações
 window.addEventListener('load', function() {
     document.body.classList.add('fully-loaded');
     console.log('Todos recursos carregados');
+    
+    // Refresh final para garantir que todas animações funcionem
+    if (typeof AOS !== 'undefined') {
+        setTimeout(() => AOS.refresh(), 500);
+    }
+});
+
+// Atualiza animações ao mudar orientação do dispositivo
+window.addEventListener('orientationchange', function() {
+    if (typeof AOS !== 'undefined') {
+        setTimeout(() => AOS.refresh(), 300);
+    }
 });
