@@ -1,83 +1,77 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Inicializa AOS depois de um pequeno delay
-  setTimeout(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: 'ease-in-out',
-      offset: 100,
-      startEvent: 'load' // Dispara quando a página terminar de carregar
-    });
-  }, 300);
-  
-  // Força a exibição dos elementos ocultos
-  const hiddenElements = document.querySelectorAll('#instagram, footer');
-  hiddenElements.forEach(el => {
-    el.style.opacity = '1';
-    el.style.transform = 'none';
+  // Configuração do AOS atualizada
+  AOS.init({
+    duration: 600,
+    once: true,
+    offset: 120,
+    easing: 'ease-out-quad',
+    disable: function() {
+      return window.innerWidth < 768 && this.hasAttribute('data-aos-disable-mobile');
+    }
   });
 
-  // Efeito de scroll no header - versão melhorada
+  // Sua função handleScroll() existente
   function handleScroll() {
     const header = document.querySelector('header');
     if (!header) return;
     
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
-      // Adiciona sombra apenas quando scrolled
       header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
     } else {
       header.classList.remove('scrolled');
       header.style.boxShadow = 'none';
     }
   }
-  
-  // Adiciona o event listener e executa imediatamente
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Executa logo ao carregar para verificar a posição
 
-  // Menu toggle - versão mais robusta
+  // Função nova para animações mobile
+  function initMobileAnimations() {
+    if (window.innerWidth < 768) {
+      document.querySelectorAll('[data-aos]:not([data-aos-disable-mobile])').forEach(el => {
+        el.style.opacity = '0';
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        }, 50);
+      });
+    }
+  }
+
+  // Seu menu toggle existente
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   
   if (menuToggle && navLinks) {
-    // Função para fechar o menu
     const closeMenu = () => {
       navLinks.classList.remove('active');
       menuToggle.classList.remove('active');
-      document.body.style.overflow = ''; // Restaura o scroll do body
+      document.body.style.overflow = '';
     };
     
-    // Função para abrir/fechar o menu
     const toggleMenu = () => {
       const isActive = navLinks.classList.contains('active');
-      
       if (isActive) {
         closeMenu();
       } else {
         navLinks.classList.add('active');
         menuToggle.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Impede scroll do body quando menu está aberto
+        document.body.style.overflow = 'hidden';
       }
     };
     
-    // Evento de clique no toggle
     menuToggle.addEventListener('click', toggleMenu);
     
-    // Fecha o menu ao clicar nos links
     const navItems = document.querySelectorAll('.nav-links a');
     navItems.forEach(item => {
       item.addEventListener('click', closeMenu);
     });
     
-    // Fecha o menu ao clicar fora (opcional)
     document.addEventListener('click', (e) => {
       if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
         closeMenu();
       }
     });
     
-    // Fecha o menu ao redimensionar a janela (para desktop)
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
         closeMenu();
@@ -85,15 +79,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Adiciona efeito de onda nos botões com classe btn-pulse
+  // Seus event listeners existentes
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+
+  // Inicializa animações mobile
+  initMobileAnimations();
+  window.addEventListener('resize', initMobileAnimations);
+
+  // Seu código de pulse buttons existente
   const pulseButtons = document.querySelectorAll('.btn-pulse');
   pulseButtons.forEach(button => {
     button.addEventListener('click', function(e) {
-      // Cria elemento de onda
       const wave = document.createElement('span');
       wave.className = 'wave';
-      
-      // Posiciona o efeito onde foi clicado
       const rect = button.getBoundingClientRect();
       const size = Math.max(rect.width, rect.height);
       const x = e.clientX - rect.left - size/2;
@@ -105,14 +104,13 @@ document.addEventListener("DOMContentLoaded", function() {
       
       button.appendChild(wave);
       
-      // Remove após a animação
       setTimeout(() => {
         wave.remove();
       }, 1000);
     });
   });
   
-  // Debug - verifica se os elementos principais existem
+  // Debug
   if (!menuToggle) console.warn('Botão do menu não encontrado');
   if (!navLinks) console.warn('Links de navegação não encontrados');
 });
