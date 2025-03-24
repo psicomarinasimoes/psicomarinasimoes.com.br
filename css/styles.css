@@ -320,7 +320,6 @@ header.scrolled {
     background-color: var(--secondary-color);
     padding: 60px 20px;
     padding-bottom: 120px;
-    text-align: center;
 }
 
 .atendimentos-content {
@@ -338,9 +337,7 @@ header.scrolled {
 
 .detalhe-item h3 {
     font-size: 32px;
-    font-weight: 700;
     color: var(--primary-color);
-    display: inline-block;
     vertical-align: middle;
     margin: 0;
 }
@@ -354,7 +351,6 @@ header.scrolled {
 
 .detalhes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
 }
