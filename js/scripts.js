@@ -91,6 +91,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Add this to your existing DOMContentLoaded function
+const atendimentosSection = document.querySelector('#atendimentos .atendimentos-content');
+if (atendimentosSection && !document.getElementById('cta-button')) {
+  const ctaButton = document.createElement('a');
+  ctaButton.id = 'cta-button';
+  ctaButton.className = 'cta-button';
+  ctaButton.href = '#contact';
+  ctaButton.textContent = 'Agende sua consulta';
+  atendimentosSection.appendChild(ctaButton);
+
     // 6. Botões pulse (com verificação e tempo ajustado)
     document.querySelectorAll('.btn-pulse').forEach(button => {
         button.style.transitionDuration = '0.3s'; // Corrige duração
