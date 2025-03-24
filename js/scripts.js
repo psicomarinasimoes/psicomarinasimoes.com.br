@@ -125,7 +125,7 @@ if (atendimentosSection && !document.getElementById('cta-button')) {
     });
     
     // Corrige durações em todos os elementos animados
-    setTimeout(() => {
+   setTimeout(() => {
         document.querySelectorAll('*').forEach(el => {
             const style = getComputedStyle(el);
             if (style.transitionDuration === '0.00001s') {
@@ -136,17 +136,16 @@ if (atendimentosSection && !document.getElementById('cta-button')) {
             }
         });
     }, 200);
-});
+}); // ← ESTE é o fechamento CORRETO do DOMContentLoaded
 
+// AGORA SIM o event listener de load, FORA do DOMContentLoaded
 window.addEventListener('load', function() {
     document.body.classList.add('fully-loaded');
     console.log('Todos recursos carregados');
     
-    // Refresh final para garantir animações
     if (typeof AOS !== 'undefined') {
         setTimeout(() => AOS.refresh(), 300);
     }
     
-    // Garante overflow visível
     document.body.style.overflow = 'visible';
 });
