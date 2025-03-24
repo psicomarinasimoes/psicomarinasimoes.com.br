@@ -215,7 +215,7 @@ header.scrolled {
 /* Estilo da seção Hero */
 #hero {
     background-color: var(--secondary-color);
-    padding: 100px 20px 70px;
+    padding: 80px 20px 70px;
     display: flex;
     align-items: center;
     justify-content: center;
