@@ -154,7 +154,11 @@ header .crp {
 
 /* Estilo dos links de navegação */
 .nav-links {
+<<<<<<< HEAD
     display: inline-flex;
+=======
+    display: inline-block;
+>>>>>>> 2f627f4a5c8a606500fbeef217202940ea21b52a
     list-style: none;
     margin: 0;
     padding: 0;
