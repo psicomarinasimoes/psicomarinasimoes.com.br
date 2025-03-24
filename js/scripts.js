@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // 1. Corrigindo a inicialização do AOS
+    // 1. Inicialização do AOS
     if (typeof AOS !== 'undefined') {
         AOS.init({
             duration: 800,
             once: true,
             easing: 'ease-in-out',
             offset: 100,
-            disable: false, // Ativa em todos os dispositivos
+            disable: false,
             startEvent: 'DOMContentLoaded'
         });
-        
-        // Força reset das durações das animações
+
         setTimeout(() => {
             document.querySelectorAll('[data-aos]').forEach(el => {
                 el.style.transitionDuration = '0.3s';
@@ -20,33 +19,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 100);
     }
 
-    // 2. Verificação segura de elementos
+    // 2. Função auxiliar
     function safeStyleApply(elements, styles) {
         elements.forEach(el => {
-            if (el) {
-                Object.assign(el.style, styles);
-                // Corrige durações extremamente curtas
-                if (el.style.transitionDuration === '1e-05s') {
-                    el.style.transitionDuration = '0.3s';
-                }
-                if (el.style.animationDuration === '1e-05s') {
-                    el.style.animationDuration = '0.3s';
-                }
-            }
+            if (el) Object.assign(el.style, styles);
         });
     }
 
-    // 3. Aplicação de estilos com fallback
+    // 3. Aplicação de estilos
     safeStyleApply(document.querySelectorAll('#instagram, footer'), {
         opacity: '1',
         transform: 'none',
-        transitionDuration: '0.3s' // Garante duração adequada
+        transitionDuration: '0.3s'
     });
 
-    // 4. Header scroll (com durações corrigidas)
+    // 4. Header scroll
     const header = document.querySelector('header');
     if (header) {
-        // Corrige a transição do header
         header.style.transition = 'background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease';
         
         const handleScroll = () => {
@@ -59,12 +48,11 @@ document.addEventListener("DOMContentLoaded", function() {
         handleScroll();
     }
 
-    // 5. Menu toggle (versão mais segura)
+    // 5. Menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     
     if (menuToggle && navLinks) {
-        // Ajusta a transição do menu
         navLinks.style.transitionDuration = '0.3s';
         
         const closeMenu = () => {
@@ -91,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Add this to your existing DOMContentLoaded function
+    // 6. Botão de atendimentos
     const atendimentosSection = document.querySelector('#atendimentos .atendimentos-content');
     if (atendimentosSection && !document.getElementById('cta-button')) {
         const ctaButton = document.createElement('a');
@@ -100,9 +88,9 @@ document.addEventListener("DOMContentLoaded", function() {
         ctaButton.href = '#contact';
         ctaButton.textContent = 'Agende sua consulta';
         atendimentosSection.appendChild(ctaButton);
-    } // ← Fechamento faltante do if
+    }
 
-    // 6. Botões pulse (com verificação e tempo ajustado)
+    // 7. Botões pulse
     document.querySelectorAll('.btn-pulse').forEach(button => {
         button.style.transitionDuration = '0.3s';
         
@@ -124,15 +112,9 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => wave.remove(), 300);
         });
     });
-    
-    // Corrige durações em todos os elementos animados
-    setTimeout(() => {
-    document.querySelectorAll('[data-aos], .animated-element').forEach(el => {
-        el.style.transitionDuration = '0.3s';
-        el.style.animationDuration = '0.3s';
-    });
-}, 200);
+}); // ← Fechamento do DOMContentLoaded
 
+// Load event (FORA do DOMContentLoaded)
 window.addEventListener('load', function() {
     document.body.classList.add('fully-loaded');
     console.log('Todos recursos carregados');
