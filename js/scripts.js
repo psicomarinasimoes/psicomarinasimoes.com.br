@@ -91,28 +91,29 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // 7. Botões pulse
-    document.querySelectorAll('.btn-pulse').forEach(button => {
-        button.style.transitionDuration = '0.3s';
-        
-        button.addEventListener('click', function(e) {
-            const wave = document.createElement('span');
-            wave.className = 'wave';
-            const rect = button.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            
-            Object.assign(wave.style, {
-                width: `${size}px`,
-                height: `${size}px`,
-                left: `${e.clientX - rect.left - size/2}px`,
-                top: `${e.clientY - rect.top - size/2}px`,
-                animationDuration: '0.3s'
-            });
+     document.querySelectorAll('.btn-pulse').forEach(button => {
+            button.style.transitionDuration = '0.3s';
 
-            button.appendChild(wave);
-            setTimeout(() => wave.remove(), 300);
+            button.addEventListener('click', function(e) {
+                const wave = document.createElement('span');
+                wave.className = 'wave';
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+
+                Object.assign(wave.style, {
+                    width: `${size}px`,
+                    height: `${size}px`,
+                    left: `${e.clientX - rect.left - size / 2}px`,
+                    top: `${e.clientY - rect.top - size / 2}px`,
+                    animationDuration: '0.3s'
+                });
+
+                wave.classList.add('wave-animation'); // Complete this line with the class name
+
+                button.appendChild(wave);
+                setTimeout(() => wave.remove(), 300);
+            });
         });
-    });
-}); // ← Fechamento do DOMContentLoaded
 
 // Load event (FORA do DOMContentLoaded)
 window.addEventListener('load', function() {
