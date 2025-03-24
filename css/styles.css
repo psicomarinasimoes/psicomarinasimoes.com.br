@@ -84,6 +84,31 @@ header .crp {
     color: var(--secondary-color);
 }
 
+/* Estilo dos links de navegação */
+.nav-links {
+    display: flex; /* Exibe os links em linha (um ao lado do outro) */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px; /* Ajuste para alinhar o menu à direita */
+}
+
+.nav-links li {
+    margin-left: 20px; /* Espaçamento entre os links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: none;
+    font-weight: bold;
+}
+
 /* Estilo do menu sanduíche */
 .menu-toggle {
     display: none; /* Oculta o botão por padrão (para desktop) */
@@ -134,31 +159,6 @@ header .crp {
 
 .menu-toggle.active .menu-icon::after {
     transform: rotate(-45deg);
-}
-
-/* Estilo dos links de navegação */
-.nav-links {
-    display: flex; /* Exibe os links em linha (um ao lado do outro) */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-right: 20px; /* Ajuste para alinhar o menu à direita */
-}
-
-.nav-links li {
-    margin-left: 20px; /* Espaçamento entre os links */
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: none;
-    font-weight: bold;
 }
 
 /* Estilo para o menu mobile */
