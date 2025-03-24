@@ -335,9 +335,13 @@ header.scrolled {
     padding-bottom: 120px;
 }
 
-.atendimentos-content {
-    max-width: 1200px;
-    margin: auto;
+/* Container principal - garante centralização */
+#atendimentos .atendimentos-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center;
+  padding-bottom: 40px; /* Espaço abaixo do botão */
 }
 
 .atendimentos-content h2 {
@@ -433,15 +437,6 @@ header.scrolled {
     color: #8F9779;
     margin-right: 10px;
     text-align: left;
-}
-
-/* Container principal - garante centralização */
-#atendimentos .atendimentos-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
-  text-align: center;
-  padding-bottom: 40px; /* Espaço abaixo do botão */
 }
 
 /* Estilo específico para o botão de atendimentos */
