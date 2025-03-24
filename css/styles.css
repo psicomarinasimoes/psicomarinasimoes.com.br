@@ -65,12 +65,6 @@ body {
 }
 
 /* Estilo do texto do header (nome e CRP) */
-.header-text {
-    text-align: left;
-    margin-left: 20px; /* Ajuste para alinhar o texto à esquerda */
-    max-width: 50%; 
-}
-
 header h1 {
     font-family: var(--font-secondary);
     font-size: 18px;
