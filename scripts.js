@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Inicializa AOS depois de um pequeno delay para garantir que o DOM está pronto
+  // Inicializa AOS depois de um pequeno delay
   setTimeout(() => {
     AOS.init({
       duration: 800,
       once: true,
       easing: 'ease-in-out',
       offset: 100,
-      disable: window.innerWidth < 768 // Desativa em mobile se necessário
+      startEvent: 'load' // Dispara quando a página terminar de carregar
     });
-  }, 100);
-
+  }, 300);
+  
   // Força a exibição dos elementos ocultos
   const hiddenElements = document.querySelectorAll('#instagram, footer');
   hiddenElements.forEach(el => {
