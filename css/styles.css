@@ -68,6 +68,7 @@ body {
 .header-text {
     text-align: left;
     margin-left: 20px; /* Ajuste para alinhar o texto à esquerda */
+    max-width: 50%; 
 }
 
 header h1 {
