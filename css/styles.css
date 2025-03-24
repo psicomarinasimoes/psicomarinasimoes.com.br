@@ -436,24 +436,23 @@ header.scrolled {
 }
 
 #cta-button {
-    display: inline-block;
+    display: inline-block; /* Mantém o tamanho conforme o conteúdo */
     background-color: #B57170;
     color: white;
     padding: 20px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-size: 18px;
-    margin-top: 120px;
-    align-items: center;
-    text-align: center;
+    margin: 120px auto 0; /* Altera a margem superior e adiciona auto para laterais */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    /* Remove align-items pois não funciona em inline-block */
 }
 
 #cta-button:hover {
     background-color: #A55A5A;
     transform: scale(1.05);
-    align-items: center;
-    margin-top: 120px;
+    /* Remove margin-top duplicada e align-items */
 }
 
 /* Seção Serviços */
