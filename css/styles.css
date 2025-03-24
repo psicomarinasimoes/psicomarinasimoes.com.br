@@ -196,49 +196,14 @@ header.scrolled {
     padding: 10px 40px;
 }
 
-/* Estilo da seção Hero */
+/* Substitua o atual #hero por isto: */
 #hero {
     background-color: var(--secondary-color);
-    padding: 100px 20px 70px;
+    padding: 70px 20px; /* Reduzi o padding-top de 100px para 70px */
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 0;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    gap: 20px;
-}
-
-.hero-text {
-    flex: 1;
-    max-width: 650px;
-    text-align: left;
-}
-
-.hero-text h2 {
-    font-family: var(--font-primary);
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    margin-top: 40px;
-    text-align: left;
-}
-
-.hero-text p {
-    font-family: var(--font-secondary);
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--quaternary-color);
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: justify;
+    min-height: calc(100vh - 70px); /* 70px é a altura do header */
+    box-sizing: border-box;
 }
 
 .cta-button {
@@ -258,11 +223,20 @@ header.scrolled {
     transform: scale(1.05);
 }
 
-/* Estilo para o GIF da logo */
-.hero-logo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    #hero {
+        padding: 50px 20px;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        flex-direction: column-reverse; /* Opcional: inverte a ordem em mobile */
+    }
+    
+    .hero-text {
+        margin-top: 30px;
+    }
 }
 
 /* Seção Sobre Mim */
