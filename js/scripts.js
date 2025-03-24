@@ -127,17 +127,11 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Corrige durações em todos os elementos animados
     setTimeout(() => {
-        document.querySelectorAll('*').forEach(el => {
-            const style = getComputedStyle(el);
-            if (style.transitionDuration === '0.00001s') {
-                el.style.transitionDuration = '0.3s';
-            }
-            if (style.animationDuration === '0.00001s') {
-                el.style.animationDuration = '0.3s';
-            }
-        });
-    }, 200);
-}); // ← Único fechamento do DOMContentLoaded
+    document.querySelectorAll('[data-aos], .animated-element').forEach(el => {
+        el.style.transitionDuration = '0.3s';
+        el.style.animationDuration = '0.3s';
+    });
+}, 200);
 
 window.addEventListener('load', function() {
     document.body.classList.add('fully-loaded');
