@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         once: true,
         easing: 'ease-in-out',
         offset: 100,
-        disable: false
+        disable: ('ontouchstart' in window) && window.innerWidth < 768
     });
 
     // 2. Verificação segura de elementos
