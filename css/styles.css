@@ -557,6 +557,15 @@ header.scrolled {
     transform: scale(1.05);
 }
 
+/* Aumenta no mobile */
+@media (max-width: 768px) {
+    .instagram-widget {
+        width: 100%; /* Ocupa toda a largura */
+        max-width: 400px; /* Limita o tamanho máximo */
+        height: 500px; /* Aumenta a altura */
+        margin: 0 auto; /* Centraliza */
+    }
+
 #contato {
     background-color: var(--secondary-color);
     color: white;
