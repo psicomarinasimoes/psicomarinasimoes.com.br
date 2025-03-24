@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
           navLinks.classList.toggle('active');
           // Alterna a classe 'active' no botão do menu (para animar o ícone)
           menuToggle.classList.toggle('active');
+          console.log('Menu toggle clicked. Active class toggled.'); // Debug
       });
 
       // Fecha o menu ao clicar em um link (opcional)
