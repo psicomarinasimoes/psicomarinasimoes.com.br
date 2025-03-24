@@ -1,11 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Inicializa a biblioteca AOS (Animate On Scroll) com mais opções
-  AOS.init({
-    duration: 800, // Duração mais rápida (800ms em vez de 1000ms)
-    once: true,    // Anima apenas uma vez
-    easing: 'ease-in-out', // Tipo de easing
-    offset: 120,   // Dispara a animação 120px antes do elemento chegar na tela
-    mirror: false  // Não anima elementos enquanto rola para cima
+  // Inicializa AOS depois de um pequeno delay para garantir que o DOM está pronto
+  setTimeout(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out',
+      offset: 100,
+      disable: window.innerWidth < 768 // Desativa em mobile se necessário
+    });
+  }, 100);
+
+  // Força a exibição dos elementos ocultos
+  const hiddenElements = document.querySelectorAll('#instagram, footer');
+  hiddenElements.forEach(el => {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
   });
 
   // Efeito de scroll no header - versão melhorada
