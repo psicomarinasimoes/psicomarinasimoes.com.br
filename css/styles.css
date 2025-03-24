@@ -4,8 +4,8 @@
     --primary-color: #6F8FAF;
     --secondary-color: #FBFBFB;
     --tertiary-color: #3F7D58;
-    --quaternary-color:#B57170;
-    --quinary-color:#666666;
+    --quaternary-color: #B57170;
+    --quinary-color: #666666;
     --font-primary: 'Open Sans', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
     --text-color: #666666;
@@ -29,14 +29,17 @@ body {
 
 /* Evita overflow horizontal */
 html, body {
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
-    width: 100%; /* Garante que o body ocupe 100% da largura */
-    max-width: 100%; /* Impede que o conteúdo ultrapasse a largura da tela */
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
-/* Garante que todos os elementos respeitem a largura da tela */
-* {
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Padding igual à esquerda e à direita */
 }
 
 /* Estilo do cabeçalho */
@@ -47,7 +50,7 @@ header {
     width: 100%;
     background-color: rgba(111, 143, 175, 1.0);
     color: var(--secondary-color);
-    padding: 10px 20px; /* Adicionado padding horizontal */
+    padding: 10px 20px; /* Padding horizontal */
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -58,17 +61,7 @@ header {
 
 /* Espaço para o cabeçalho fixo */
 body {
-    padding-top: 70px; /* Ajuste conforme a altura do header */
-}
-
-/* Container do conteúdo do header */
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Limita a largura do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
+    padding-top: 70px;
 }
 
 /* Estilo do texto do header */
@@ -92,7 +85,7 @@ header .crp {
 
 /* Estilo do menu sanduíche */
 .menu-toggle {
-    display: none; /* Oculta o botão por padrão (para desktop) */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -131,7 +124,7 @@ header .crp {
 
 /* Estilo quando o menu está ativo */
 .menu-toggle.active .menu-icon {
-    background-color: transparent; /* Remove a linha do meio */
+    background-color: transparent;
 }
 
 .menu-toggle.active .menu-icon::before {
@@ -162,31 +155,31 @@ header .crp {
 }
 
 .nav-links a:hover {
-    color: none; /* Cor ao passar o mouse */
+    color: none;
     font-weight: bold;
 }
 
 /* Estilo para o menu mobile */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Exibe o botão no mobile */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Oculta os links por padrão no mobile */
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Ajuste conforme a altura do header */
+        top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgba(111, 143, 175, 0.95); /* Fundo semi-transparente */
+        background-color: rgba(111, 143, 175, 0.95);
         padding: 10px 0;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        z-index: 999; /* Garante que o menu fique acima de outros elementos */
+        z-index: 999;
     }
 
     .nav-links.active {
-        display: flex; /* Exibe os links quando o menu está ativo */
+        display: flex;
     }
 
     .nav-links li {
@@ -196,9 +189,10 @@ header .crp {
 
     .nav-links a {
         font-size: 18px;
-        color: #ffffff; /* Cor dos links no mobile */
+        color: #ffffff;
     }
 }
+
 /* Efeito ao rolar a página */
 header.scrolled {
     background: var(--primary-color);
@@ -237,7 +231,7 @@ header.scrolled {
     color: var(--primary-color);
     margin-bottom: 20px;
     margin-top: 40px;
-    text-align: left
+    text-align: left;
 }
 
 .hero-text p {
@@ -268,11 +262,11 @@ header.scrolled {
 }
 
 /* Estilo para o GIF da logo */
- .hero-logo img {
+.hero-logo img {
     max-width: 100%;
     height: auto;
-    display: block; /* Evita espaços extras ao redor da imagem */
-  }
+    display: block;
+}
 
 /* Seção Sobre Mim */
 #sobre {
@@ -336,8 +330,8 @@ header.scrolled {
 
 .atendimentos-content h2 {
     font-family: var(--font-primary);
-    font-size: 40px; /* Aumentei o tamanho */
-    font-weight: 700; /* Deixei mais grosso */
+    font-size: 40px;
+    font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 60px;
 }
@@ -346,34 +340,34 @@ header.scrolled {
     font-size: 32px;
     font-weight: 700;
     color: var(--primary-color);
-    display: inline-block; /* Alinha o texto na mesma linha */
-    vertical-align: middle; /* Centraliza verticalmente o texto */
-    margin: 0; /* Remove margens padrão do h3 */
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
 }
 
 .intro-text {
-    font-size: 20px; /* Reduzi o tamanho para destacar o título */
-    font-weight: 400; /* Peso normal */
+    font-size: 20px;
+    font-weight: 400;
     margin-bottom: 40px;
     color: var(--text-color);
 }
 
 .detalhes-grid {
     display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
-    gap: 20px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
 /* Ajustes para mobile */
 @media (max-width: 768px) {
     .detalhes-grid {
-        grid-template-columns: 1fr; /* Uma coluna no mobile */
+        grid-template-columns: 1fr;
     }
+}
 
 .detalhe-item {
-    flex: 1 1 calc(50% - 20px); /* Ajusta o tamanho dos itens */
+    flex: 1 1 calc(50% - 20px);
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -385,7 +379,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px; /* Espaçamento entre o ícone/título e o parágrafo */
+    margin-bottom: 10px;
     text-align: justify;
 }
 
@@ -459,10 +453,10 @@ header.scrolled {
 /* Ajustes para mobile */
 @media (max-width: 768px) {
     .cta-button {
-        width: 100%; /* Ocupa a largura total */
-        text-align: center; /* Centraliza o texto */
-        font-size: 18px; /* Aumenta o tamanho da fonte */
-        padding: 15px 20px; /* Aumenta o padding */
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 15px 20px;
     }
 }
 
@@ -508,28 +502,27 @@ header.scrolled {
     transform: translateY(-10px);
 }
 
-/* Ajustar ícones da seção de serviços */
 .service i {
-    font-size: 30px; /* Aumentei o tamanho dos ícones */
-    margin-bottom: 20px; /* Espaçamento abaixo do ícone */
-    color: var(--primary-color); /* Cor padrão */
-    transition: transform 0.3s ease; /* Adicionei uma animação suave */
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
 }
 
 .service i:hover {
-    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+    transform: scale(1.1);
 }
 
 .icone-servico-1 {
-    color: #B57170; /* Cor personalizada para o ícone 1 */
+    color: #B57170;
 }
 
 .icone-servico-2 {
-    color: #6F8FAF; /* Cor personalizada para o ícone 2 */
+    color: #6F8FAF;
 }
 
 .icone-servico-3 {
-    color: #8F9779; /* Cor personalizada para o ícone 3 */
+    color: #8F9779;
 }
 
 .service h3 {
@@ -550,34 +543,31 @@ header.scrolled {
 #instagram {
     padding: 60px 20px;
     background-color: var(--secondary-color);
-    text-align: center; /* Centraliza o conteúdo */
+    text-align: center;
 }
 
-/* Estilo da seção do Instagram */
 .instagram-content {
     width: 100%;
-    max-width: 1200px; /* Limita a largura máxima */
-    margin: 0 auto; /* Centraliza a seção */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-/* Estilo do widget do Instagram */
 .instagram-feed iframe {
-    width: 100%; /* Ocupa 100% da largura do container */
-    height: auto; /* Altura ajustável */
-    border: none; /* Remove bordas */
+    width: 100%;
+    height: auto;
+    border: none;
 }
 
-/* Ajustes para mobile */
 @media (max-width: 768px) {
     .instagram-feed iframe {
-        height: 300px; /* Altura fixa para mobile */
+        height: 300px;
     }
 }
 
 .cta-button {
-    background-color: var(--quaternary-color); /* Cor do Instagram */
-    color: white; /* Cor do texto */
+    background-color: var(--quaternary-color);
+    color: white;
     padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
@@ -588,13 +578,13 @@ header.scrolled {
 }
 
 .cta-button:hover {
-    background-color: var(--primary-color); /* Cor do Instagram ao passar o mouse */
+    background-color: var(--primary-color);
     transform: scale(1.05);
 }
 
 .instagram-content h2 {
-    font-size: 40px; /* Aumentei o tamanho */
-    font-weight: 700; /* Deixei mais grosso */
+    font-size: 40px;
+    font-weight: 700;
     color: var(--quaternary-color);
     margin-bottom: 40px;
 }
@@ -602,14 +592,14 @@ header.scrolled {
 #contato {
     background-color: var(--secondary-color);
     color: white;
-    padding-top: 30px; /* Espaço interno no topo da seção */
+    padding-top: 30px;
 }
 
 .contact-content h2 {
     font-size: 40px;
     font-weight: 700;
     color: var(--primary-color);
-    margin-top: 30px; /* Espaço adicional acima do título */
+    margin-top: 30px;
     text-align: center;
 }
 
