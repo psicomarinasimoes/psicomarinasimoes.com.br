@@ -822,11 +822,31 @@ footer {
   transform: none !important;
 }
 
-/* Responsividade para animações */
+/* Ativa animações no mobile */
 @media (max-width: 768px) {
   [data-aos] {
-    transition: none !important;
-    transform: none !important;
+    transition-property: opacity, transform !important;
     opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  /* Ajuste específico para elementos que devem animar */
+  [data-aos^="fade"][data-aos^="fade"],
+  [data-aos^="zoom"][data-aos^="zoom"],
+  [data-aos^="flip"][data-aos^="flip"] {
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  [data-aos^="fade"][data-aos^="fade"].aos-animate,
+  [data-aos^="zoom"][data-aos^="zoom"].aos-animate,
+  [data-aos^="flip"][data-aos^="flip"].aos-animate {
+    opacity: 1;
+    transform: none;
   }
 }
