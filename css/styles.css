@@ -798,6 +798,13 @@ body {
         height: 500px;
         margin: 0 auto;
     }
+  /* Garante que o conteúdo principal seja visível */
+@media (max-width: 768px) {
+  main {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
 }
 
 /* ==================== */
