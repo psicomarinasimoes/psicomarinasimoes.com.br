@@ -364,6 +364,34 @@ header.scrolled {
     .detalhes-grid {
         grid-template-columns: 1fr;
     }
+
+    .detalhe-item {
+        flex: 1 1 100%;
+        padding: 15px; /* Padding menor para mobile */
+    }
+
+    .hero-text h2 {
+        font-size: 32px; /* Tamanho menor para mobile */
+    }
+
+    .hero-text p {
+        font-size: 18px; /* Tamanho menor para mobile */
+    }
+
+    .about-text h2 {
+        font-size: 24px; /* Tamanho menor para mobile */
+    }
+
+    .about-text p {
+        font-size: 18px; /* Tamanho menor para mobile */
+    }
+
+    .cta-button {
+        width: 100%; /* Ocupa a largura total no mobile */
+        text-align: center;
+        font-size: 16px; /* Tamanho menor para mobile */
+        padding: 12px 20px; /* Padding menor para mobile */
+    }
 }
 
 .detalhe-item {
@@ -448,16 +476,6 @@ header.scrolled {
     transform: scale(1.05);
     align-items: center;
     margin-top: 120px;
-}
-
-/* Ajustes para mobile */
-@media (max-width: 768px) {
-    .cta-button {
-        width: 100%;
-        text-align: center;
-        font-size: 18px;
-        padding: 15px 20px;
-    }
 }
 
 /* Seção Serviços */
@@ -561,8 +579,7 @@ header.scrolled {
 
 @media (max-width: 768px) {
     .instagram-feed iframe {
-        height: auto;
-        border: none;
+        height: 300px;
     }
 }
 
