@@ -561,7 +561,8 @@ header.scrolled {
 
 @media (max-width: 768px) {
     .instagram-feed iframe {
-        height: 300px;
+        height: auto;
+        border: none;
     }
 }
 
