@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
     --primary-color: #6F8FAF;
@@ -196,14 +196,49 @@ header.scrolled {
     padding: 10px 40px;
 }
 
-/* Substitua o atual #hero por isto: */
+/* Estilo da seção Hero */
 #hero {
     background-color: var(--secondary-color);
-    padding: 70px 20px; /* Reduzi o padding-top de 100px para 70px */
+    padding: 100px 20px 70px;
     display: flex;
     align-items: center;
-    min-height: calc(100vh - 70px); /* 70px é a altura do header */
-    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 650px;
+    text-align: left;
+}
+
+.hero-text h2 {
+    font-family: var(--font-primary);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.hero-text p {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--quaternary-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 .cta-button {
@@ -223,20 +258,11 @@ header.scrolled {
     transform: scale(1.05);
 }
 
-/* Ajuste para mobile */
-@media (max-width: 768px) {
-    #hero {
-        padding: 50px 20px;
-        min-height: auto;
-    }
-    
-    .hero-content {
-        flex-direction: column-reverse; /* Opcional: inverte a ordem em mobile */
-    }
-    
-    .hero-text {
-        margin-top: 30px;
-    }
+/* Estilo para o GIF da logo */
+.hero-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Seção Sobre Mim */
@@ -569,69 +595,6 @@ footer p {
     font-size: 16px;
     font-weight: 400;
     color: var(--secondary-color);
-}
-/* ==================== */
-/* AJUSTES ESPECÍFICOS */
-/* ==================== */
-
-/* 1. Correção para títulos na seção Atendimentos */
-.detalhe-item h3 {
-    text-align: center;
-    width: 100%;
-    margin: 0 auto 15px;
-    padding: 0 10px;
-}
-
-.icone-titulo {
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.icone-destaque {
-    margin: 0 auto 10px;
-    display: block;
-}
-
-/* 2. Ajuste de espaçamento na Hero Section */
-#hero {
-    padding: 70px 20px;
-    min-height: calc(100vh - 70px);
-    box-sizing: border-box;
-}
-
-.hero-text h2 {
-    margin-top: 0; /* Remove a margem superior extra */
-}
-
-/* Ajustes para mobile */
-@media (max-width: 768px) {
-    #hero {
-        padding: 40px 20px;
-        min-height: auto;
-    }
-    
-    .hero-content {
-        flex-direction: column;
-    }
-    
-    .hero-text {
-        margin-top: 20px;
-        text-align: center;
-    }
-    
-    .hero-text h2 {
-        font-size: 32px;
-        text-align: center;
-    }
-    
-    .hero-text p {
-        text-align: center;
-    }
-    
-    .detalhe-item h3 {
-        font-size: 22px;
-    }
 }
 
 @media (max-width: 768px) {
