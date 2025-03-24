@@ -39,7 +39,7 @@ html, body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Padding igual à esquerda e à direita */
+    padding: 0 20px;
 }
 
 /* Estilo do cabeçalho */
@@ -50,11 +50,11 @@ header {
     width: 100%;
     background-color: rgba(111, 143, 175, 1.0);
     color: var(--secondary-color);
-    padding: 10px 20px; /* Padding horizontal */
+    padding: 10px 20px;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between; /* Espaço entre os elementos */
+    justify-content: space-between;
     align-items: center;
     transition: background 0.3s ease, padding 0.3s ease;
 }
@@ -64,7 +64,7 @@ body {
     padding-top: 70px;
 }
 
-/* Estilo do texto do header (nome e CRP) */
+/* Estilo do texto do header */
 header h1 {
     font-family: var(--font-secondary);
     font-size: 18px;
@@ -81,7 +81,7 @@ header .crp {
 
 /* Estilo dos links de navegação */
 .nav-links {
-    display: flex; /* Exibe os links em linha (um ao lado do outro) */
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -89,7 +89,7 @@ header .crp {
 }
 
 .nav-links li {
-    margin-left: 20px; /* Espaçamento entre os links */
+    margin-left: 20px;
 }
 
 .nav-links a {
@@ -106,7 +106,7 @@ header .crp {
 
 /* Estilo do menu sanduíche */
 .menu-toggle {
-    display: none; /* Oculta o botão por padrão (para desktop) */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -115,7 +115,7 @@ header .crp {
 }
 
 .menu-icon {
-    display: none; /* Oculta o ícone do menu sanduíche no desktop */
+    display: none;
     width: 24px;
     height: 2px;
     background-color: var(--secondary-color);
@@ -159,11 +159,11 @@ header .crp {
 /* Estilo para o menu mobile */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Exibe o botão do menu sanduíche no mobile */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Oculta os links no mobile por padrão */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -176,7 +176,7 @@ header .crp {
     }
 
     .nav-links.active {
-        display: flex; /* Exibe os links quando o menu está ativo */
+        display: flex;
     }
 
     .nav-links li {
@@ -336,11 +336,11 @@ header.scrolled {
 }
 
 .detalhe-item h3 {
-    font-size: 24px; /* Tamanho menor para o título */
+    font-size: 24px;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
-    text-align: center; /* Centraliza o título */
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .intro-text {
@@ -352,43 +352,9 @@ header.scrolled {
 
 .detalhes-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
-}
-
-/* Ajustes para mobile */
-@media (max-width: 768px) {
-    .detalhes-grid {
-        grid-template-columns: 1fr; /* Uma coluna no mobile */
-    }
-
-    .detalhe-item {
-        padding: 15px; /* Padding menor para mobile */
-    }
-
-    .hero-text h2 {
-        font-size: 32px; /* Tamanho menor para mobile */
-    }
-
-    .hero-text p {
-        font-size: 18px; /* Tamanho menor para mobile */
-    }
-
-    .about-text h2 {
-        font-size: 24px; /* Tamanho menor para mobile */
-    }
-
-    .about-text p {
-        font-size: 18px; /* Tamanho menor para mobile */
-    }
-
-    .cta-button {
-        width: 100%; /* Ocupa a largura total no mobile */
-        text-align: center;
-        font-size: 16px; /* Tamanho menor para mobile */
-        padding: 12px 20px; /* Padding menor para mobile */
-    }
 }
 
 .detalhe-item {
@@ -539,20 +505,6 @@ header.scrolled {
     color: #8F9779;
 }
 
-.service h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.service p {
-    font-size: 20px;
-    font-weight: 400;
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
 /* Seção Instagram */
 #instagram {
     padding: 60px 20px;
@@ -569,14 +521,8 @@ header.scrolled {
 
 .instagram-feed iframe {
     width: 100%;
-    height: 400px; /* Altura fixa para o widget */
+    height: 400px;
     border: none;
-}
-
-@media (max-width: 768px) {
-    .instagram-feed iframe {
-        height: 300px; /* Altura menor para mobile */
-    }
 }
 
 .cta-button {
@@ -594,13 +540,6 @@ header.scrolled {
 .cta-button:hover {
     background-color: var(--primary-color);
     transform: scale(1.05);
-}
-
-.instagram-content h2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--quaternary-color);
-    margin-bottom: 40px;
 }
 
 #contato {
@@ -684,6 +623,10 @@ footer p {
         margin: 0 auto;
     }
 
+    .detalhes-grid {
+        grid-template-columns: 1fr;
+    }
+
     .detalhe-item {
         flex: 1 1 100%;
     }
@@ -692,7 +635,35 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    /* ==================== */
+    .instagram-feed iframe {
+        height: 300px;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+/* ==================== */
 /* ANIMAÇÕES PERSONALIZADAS */
 /* ==================== */
 
@@ -835,622 +806,20 @@ header.scrolled {
   box-shadow: 0 30px 60px rgba(0,0,0,0.3);
 }
 
-/* Animação de entrada para o hero */
-.hero-text {
-  transition: all 0.8s ease 0.2s;
+/* CORREÇÕES PARA O PROBLEMA DE ELEMENTOS INVISÍVEIS */
+#instagram, 
+footer {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
-.hero-logo {
-  transition: all 0.8s ease 0.4s;
-}
-
-/* Efeito de onda no hover dos botões */
-.wave-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.wave-effect .wave {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  margin-top: -250px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 43%;
-  transform-origin: 50% 50%;
-  transform: scale(0);
-  opacity: 1;
-  animation: wave 3s infinite linear;
-}
-
-@keyframes wave {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
-/* Responsividade para animações */
-@media (max-width: 768px) {
-  [data-aos] {
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
-}/* ==================== */
-/* ANIMAÇÕES PERSONALIZADAS */
-/* ==================== */
-
-/* Animação do header ao scroll */
-header.scrolled {
-  background-color: rgba(111, 143, 175, 0.98);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-  padding: 10px 20px;
-}
-
-/* Efeitos de entrada suave */
 [data-aos] {
-  transition: all 0.8s ease;
+  pointer-events: auto !important;
 }
 
-[data-aos="fade-up"] {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-[data-aos="fade-up"].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-[data-aos="fade-left"] {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-[data-aos="fade-left"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-[data-aos="fade-right"] {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-
-[data-aos="fade-right"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-[data-aos="zoom-in"] {
-  opacity: 0;
-  transform: scale(0.9);
-}
-
-[data-aos="zoom-in"].aos-animate {
-  opacity: 1;
-  transform: scale(1);
-}
-
-[data-aos="flip-up"] {
-  opacity: 0;
-  transform: perspective(1000px) rotateX(30deg);
-}
-
-[data-aos="flip-up"].aos-animate {
-  opacity: 1;
-  transform: perspective(1000px) rotateX(0);
-}
-
-/* Animações de hover */
-.cta-button {
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.cta-button:active {
-  transform: translateY(1px);
-}
-
-/* Efeito pulsante nos botões */
-.btn-pulse {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-pulse:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10,10);
-  opacity: 0;
-  transition: transform .5s, opacity 1s;
-}
-
-.btn-pulse:active:after {
-  transform: scale(0,0);
-  opacity: .3;
-  transition: 0s;
-}
-
-/* Animações para cards */
-.detalhe-item, .service {
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform: perspective(1000px) translateZ(0);
-}
-
-.detalhe-item:hover, .service:hover {
-  transform: perspective(1000px) translateZ(20px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.05);
-}
-
-/* Animações para ícones */
-.icon-animate {
-  transition: all 0.4s ease;
-  display: inline-block;
-}
-
-.icon-animate:hover {
-  transform: scale(1.1) rotate(5deg);
-}
-
-/* Animação para a foto */
-.about-content img {
-  transition: all 0.6s ease;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-.about-content img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-}
-
-/* Animação de entrada para o hero */
-.hero-text {
-  transition: all 0.8s ease 0.2s;
-}
-
-.hero-logo {
-  transition: all 0.8s ease 0.4s;
-}
-
-/* Efeito de onda no hover dos botões */
-.wave-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.wave-effect .wave {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  margin-top: -250px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 43%;
-  transform-origin: 50% 50%;
-  transform: scale(0);
-  opacity: 1;
-  animation: wave 3s infinite linear;
-}
-
-@keyframes wave {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
-/* Responsividade para animações */
-@media (max-width: 768px) {
-  [data-aos] {
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
-}/* ==================== */
-/* ANIMAÇÕES PERSONALIZADAS */
-/* ==================== */
-
-/* Animação do header ao scroll */
-header.scrolled {
-  background-color: rgba(111, 143, 175, 0.98);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-  padding: 10px 20px;
-}
-
-/* Efeitos de entrada suave */
-[data-aos] {
-  transition: all 0.8s ease;
-}
-
-[data-aos="fade-up"] {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-[data-aos="fade-up"].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-[data-aos="fade-left"] {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-[data-aos="fade-left"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-[data-aos="fade-right"] {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-
-[data-aos="fade-right"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-[data-aos="zoom-in"] {
-  opacity: 0;
-  transform: scale(0.9);
-}
-
-[data-aos="zoom-in"].aos-animate {
-  opacity: 1;
-  transform: scale(1);
-}
-
-[data-aos="flip-up"] {
-  opacity: 0;
-  transform: perspective(1000px) rotateX(30deg);
-}
-
-[data-aos="flip-up"].aos-animate {
-  opacity: 1;
-  transform: perspective(1000px) rotateX(0);
-}
-
-/* Animações de hover */
-.cta-button {
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.cta-button:active {
-  transform: translateY(1px);
-}
-
-/* Efeito pulsante nos botões */
-.btn-pulse {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-pulse:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10,10);
-  opacity: 0;
-  transition: transform .5s, opacity 1s;
-}
-
-.btn-pulse:active:after {
-  transform: scale(0,0);
-  opacity: .3;
-  transition: 0s;
-}
-
-/* Animações para cards */
-.detalhe-item, .service {
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform: perspective(1000px) translateZ(0);
-}
-
-.detalhe-item:hover, .service:hover {
-  transform: perspective(1000px) translateZ(20px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.05);
-}
-
-/* Animações para ícones */
-.icon-animate {
-  transition: all 0.4s ease;
-  display: inline-block;
-}
-
-.icon-animate:hover {
-  transform: scale(1.1) rotate(5deg);
-}
-
-/* Animação para a foto */
-.about-content img {
-  transition: all 0.6s ease;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-.about-content img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-}
-
-/* Animação de entrada para o hero */
-.hero-text {
-  transition: all 0.8s ease 0.2s;
-}
-
-.hero-logo {
-  transition: all 0.8s ease 0.4s;
-}
-
-/* Efeito de onda no hover dos botões */
-.wave-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.wave-effect .wave {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  margin-top: -250px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 43%;
-  transform-origin: 50% 50%;
-  transform: scale(0);
-  opacity: 1;
-  animation: wave 3s infinite linear;
-}
-
-@keyframes wave {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
-/* Responsividade para animações */
-@media (max-width: 768px) {
-  [data-aos] {
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
-}/* ==================== */
-/* ANIMAÇÕES PERSONALIZADAS */
-/* ==================== */
-
-/* Animação do header ao scroll */
-header.scrolled {
-  background-color: rgba(111, 143, 175, 0.98);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-  padding: 10px 20px;
-}
-
-/* Efeitos de entrada suave */
-[data-aos] {
-  transition: all 0.8s ease;
-}
-
-[data-aos="fade-up"] {
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-[data-aos="fade-up"].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-[data-aos="fade-left"] {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-[data-aos="fade-left"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-[data-aos="fade-right"] {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-
-[data-aos="fade-right"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-[data-aos="zoom-in"] {
-  opacity: 0;
-  transform: scale(0.9);
-}
-
-[data-aos="zoom-in"].aos-animate {
-  opacity: 1;
-  transform: scale(1);
-}
-
-[data-aos="flip-up"] {
-  opacity: 0;
-  transform: perspective(1000px) rotateX(30deg);
-}
-
-[data-aos="flip-up"].aos-animate {
-  opacity: 1;
-  transform: perspective(1000px) rotateX(0);
-}
-
-/* Animações de hover */
-.cta-button {
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.cta-button:active {
-  transform: translateY(1px);
-}
-
-/* Efeito pulsante nos botões */
-.btn-pulse {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-pulse:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10,10);
-  opacity: 0;
-  transition: transform .5s, opacity 1s;
-}
-
-.btn-pulse:active:after {
-  transform: scale(0,0);
-  opacity: .3;
-  transition: 0s;
-}
-
-/* Animações para cards */
-.detalhe-item, .service {
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform: perspective(1000px) translateZ(0);
-}
-
-.detalhe-item:hover, .service:hover {
-  transform: perspective(1000px) translateZ(20px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.05);
-}
-
-/* Animações para ícones */
-.icon-animate {
-  transition: all 0.4s ease;
-  display: inline-block;
-}
-
-.icon-animate:hover {
-  transform: scale(1.1) rotate(5deg);
-}
-
-/* Animação para a foto */
-.about-content img {
-  transition: all 0.6s ease;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-.about-content img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-}
-
-/* Animação de entrada para o hero */
-.hero-text {
-  transition: all 0.8s ease 0.2s;
-}
-
-.hero-logo {
-  transition: all 0.8s ease 0.4s;
-}
-
-/* Efeito de onda no hover dos botões */
-.wave-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.wave-effect .wave {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 500px;
-  margin-left: -250px;
-  margin-top: -250px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 43%;
-  transform-origin: 50% 50%;
-  transform: scale(0);
-  opacity: 1;
-  animation: wave 3s infinite linear;
-}
-
-@keyframes wave {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
+.aos-animate {
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* Responsividade para animações */
