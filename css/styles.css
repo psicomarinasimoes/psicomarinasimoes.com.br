@@ -90,7 +90,7 @@ header .crp {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-right: 50px; /* Ajuste para alinhar o menu à direita */
+    margin-left: auto; 
 }
 
 .nav-links li {
