@@ -412,7 +412,7 @@ header.scrolled {
 }
 
 .icone-destaque {
-    font-size: 40px;
+    font-size: 20px;
     color: var(--primary-color);
     text-align: justify;
 }
