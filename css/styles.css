@@ -570,6 +570,69 @@ footer p {
     font-weight: 400;
     color: var(--secondary-color);
 }
+/* ==================== */
+/* AJUSTES ESPECÍFICOS */
+/* ==================== */
+
+/* 1. Correção para títulos na seção Atendimentos */
+.detalhe-item h3 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 15px;
+    padding: 0 10px;
+}
+
+.icone-titulo {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icone-destaque {
+    margin: 0 auto 10px;
+    display: block;
+}
+
+/* 2. Ajuste de espaçamento na Hero Section */
+#hero {
+    padding: 70px 20px;
+    min-height: calc(100vh - 70px);
+    box-sizing: border-box;
+}
+
+.hero-text h2 {
+    margin-top: 0; /* Remove a margem superior extra */
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    #hero {
+        padding: 40px 20px;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .hero-text h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .hero-text p {
+        text-align: center;
+    }
+    
+    .detalhe-item h3 {
+        font-size: 22px;
+    }
+}
 
 @media (max-width: 768px) {
     .hero-content {
