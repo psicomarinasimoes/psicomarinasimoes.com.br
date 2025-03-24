@@ -328,21 +328,22 @@ header.scrolled {
     text-align: justify;
 }
 
-/* Seção Atendimentos */
-/* Estilo para o container principal */
+ /* Seção Atendimentos - Estilo Completo */
 #atendimentos {
- background-color: var(--secondary-color);
- padding: 40px 20px; /* Ajuste conforme necessário */
- text-align: center;
+    background-color: var(--secondary-color); /* #FBFBFB */
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .atendimentos-content {
-  max-width: 756px; /* Mantém sua largura atual */
-  width: 100%;
-  margin: 0 auto; /* Centraliza o container */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza os itens filhos */
+    max-width: 756px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .atendimentos-content h2 {
