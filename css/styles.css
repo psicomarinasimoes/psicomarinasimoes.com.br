@@ -329,19 +329,19 @@ header.scrolled {
 }
 
 /* Seção Atendimentos */
+/* Estilo para o container principal */
 #atendimentos {
-    background-color: var(--secondary-color);
-    padding: 60px 20px;
-    padding-bottom: 120px;
+  padding: 40px 20px; /* Ajuste conforme necessário */
+  text-align: center;
 }
 
-/* Container principal - garante centralização */
-#atendimentos .atendimentos-content {
+.atendimentos-content {
+  max-width: 756px; /* Mantém sua largura atual */
+  width: 100%;
+  margin: 0 auto; /* Centraliza o container */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
-  text-align: center;
-  padding-bottom: 40px; /* Espaço abaixo do botão */
+  align-items: center; /* Centraliza os itens filhos */
 }
 
 .atendimentos-content h2 {
@@ -440,24 +440,26 @@ header.scrolled {
 }
 
 /* Estilo específico para o botão de atendimentos */
-#atendimentos #cta-button {
-  display: inline-block; /* ou 'block' se preferir */
-  margin: 120px auto 0; /* Centraliza com margem superior */
-  /* Mantenha suas outras propriedades existentes: */
+.cta-button-atendimentos {
+  display: inline-block;
   background-color: #B57170;
   color: white;
   padding: 20px 30px;
   border-radius: 50px;
   text-decoration: none;
   font-size: 18px;
+  margin-top: 40px;
   text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  width: auto;
+  max-width: 100%;
 }
 
-#atendimentos #cta-button:hover {
+.cta-button-atendimentos:hover {
   background-color: #A55A5A;
   transform: scale(1.05);
-  /* Remova margin-top duplicada se existir */
 }
 
 /* Seção Serviços */
