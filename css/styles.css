@@ -331,8 +331,9 @@ header.scrolled {
 /* Seção Atendimentos */
 /* Estilo para o container principal */
 #atendimentos {
-  padding: 40px 20px; /* Ajuste conforme necessário */
-  text-align: center;
+ background-color: var(--secondary-color);
+ padding: 40px 20px; /* Ajuste conforme necessário */
+ text-align: center;
 }
 
 .atendimentos-content {
@@ -442,7 +443,7 @@ header.scrolled {
 /* Estilo específico para o botão de atendimentos */
 .cta-button-atendimentos {
   display: inline-block;
-  background-color: #B57170;
+  background-color: var(--quaternary-color);
   color: white;
   padding: 20px 30px;
   border-radius: 50px;
