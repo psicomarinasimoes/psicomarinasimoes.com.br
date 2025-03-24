@@ -445,6 +445,7 @@ header.scrolled {
     font-size: 18px;
     margin-top: 120px;
     align-items: center;
+    text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -707,6 +708,8 @@ header.scrolled {
 /* Efeitos de entrada suave */
 [data-aos] {
   transition: all 0.8s ease;
+  will-change: transform, opacity;
+  backface-visibility: hidden; /* Melhora performance no mobile */
 }
 
 [data-aos="fade-up"] {
