@@ -13,18 +13,34 @@
     --info-item-color: #333;
 }
 
-/* Reset básico */
-* {
+/* Reset básico otimizado */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    /* Propriedades essenciais */
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    
+    /* Suas variáveis de estilo */
     font-family: var(--font-primary);
     background-color: var(--primary-color);
     color: var(--secondary-color);
     line-height: 1.6;
+    
+    /* Ajuste para header fixo */
+    padding-top: 70px;
+    
+    /* Garantias extras */
+    position: relative;
+    z-index: 1;
+    display: block !important;
 }
 
 /* Evita overflow horizontal */
@@ -584,17 +600,23 @@ header.scrolled {
     color: var(--primary-color);
 }
 
+/* Estilo do Footer com garantias */
 footer {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color) !important;
+    color: white !important;
     text-align: center;
     padding: 15px;
+    position: relative;
+    z-index: 10;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
 }
 
 footer p {
     font-size: 16px;
     font-weight: 400;
-    color: var(--secondary-color);
+    color: var(--secondary-color) !important;
 }
 
 @media (max-width: 768px) {
@@ -821,6 +843,8 @@ footer {
   opacity: 1 !important;
   transform: none !important;
 }
+
+
 
 /* Ativa animações no mobile */
 @media (max-width: 768px) {
