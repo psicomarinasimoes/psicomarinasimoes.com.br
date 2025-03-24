@@ -67,6 +67,7 @@ body {
 /* Estilo do texto do header */
 .header-text {
     text-align: left;
+    margin-left: 20px; /* Ajuste para alinhar o texto */
 }
 
 header h1 {
@@ -337,12 +338,11 @@ header.scrolled {
 }
 
 .detalhe-item h3 {
-    font-size: 32px;
+    font-size: 24px; /* Tamanho menor para o título */
     font-weight: 700;
     color: var(--primary-color);
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    text-align: center; /* Centraliza o título */
 }
 
 .intro-text {
@@ -354,7 +354,7 @@ header.scrolled {
 
 .detalhes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
     gap: 20px;
     padding: 20px;
 }
@@ -362,11 +362,10 @@ header.scrolled {
 /* Ajustes para mobile */
 @media (max-width: 768px) {
     .detalhes-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Uma coluna no mobile */
     }
 
     .detalhe-item {
-        flex: 1 1 100%;
         padding: 15px; /* Padding menor para mobile */
     }
 
@@ -395,7 +394,6 @@ header.scrolled {
 }
 
 .detalhe-item {
-    flex: 1 1 calc(50% - 20px);
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -573,13 +571,13 @@ header.scrolled {
 
 .instagram-feed iframe {
     width: 100%;
-    height: auto;
+    height: 400px; /* Altura fixa para o widget */
     border: none;
 }
 
 @media (max-width: 768px) {
     .instagram-feed iframe {
-        height: 300px;
+        height: 300px; /* Altura menor para mobile */
     }
 }
 
