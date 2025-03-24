@@ -695,202 +695,112 @@ footer p {
 }
 
 /* ==================== */
-/* ANIMAÇÕES PERSONALIZADAS */
+/* ANIMAÇÕES BASE (para todos os dispositivos) */
 /* ==================== */
 
-/* Animação do header ao scroll */
-header.scrolled {
-  background-color: rgba(111, 143, 175, 0.98);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-  padding: 10px 20px;
+/* Reset das animações e transições */
+body, body * {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
+}
+
+/* Configurações específicas para o header */
+header {
+    transition: background 0.3s ease, padding 0.3s ease !important;
+}
+
+/* Garantir que o conteúdo não seja cortado */
+body {
+    overflow: visible !important;
+    width: 100% !important;
 }
 
 /* Efeitos de entrada suave */
 [data-aos] {
-  transition: all 0.8s ease;
-  will-change: transform, opacity;
-  backface-visibility: hidden; /* Melhora performance no mobile */
+    transition: all 0.8s ease;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 [data-aos="fade-up"] {
-  opacity: 0;
-  transform: translateY(30px);
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 [data-aos="fade-up"].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 [data-aos="fade-left"] {
-  opacity: 0;
-  transform: translateX(30px);
+    opacity: 0;
+    transform: translateX(30px);
 }
 
 [data-aos="fade-left"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 [data-aos="fade-right"] {
-  opacity: 0;
-  transform: translateX(-30px);
+    opacity: 0;
+    transform: translateX(-30px);
 }
 
 [data-aos="fade-right"].aos-animate {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 [data-aos="zoom-in"] {
-  opacity: 0;
-  transform: scale(0.9);
+    opacity: 0;
+    transform: scale(0.9);
 }
 
 [data-aos="zoom-in"].aos-animate {
-  opacity: 1;
-  transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 [data-aos="flip-up"] {
-  opacity: 0;
-  transform: perspective(1000px) rotateX(30deg);
+    opacity: 0;
+    transform: perspective(1000px) rotateX(30deg);
 }
 
 [data-aos="flip-up"].aos-animate {
-  opacity: 1;
-  transform: perspective(1000px) rotateX(0);
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0);
 }
 
-/* Animações de hover */
-.cta-button {
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  position: relative;
-  overflow: hidden;
-}
+/* ==================== */
+/* MEDIA QUERIES PARA MOBILE */
+/* ==================== */
 
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.cta-button:active {
-  transform: translateY(1px);
-}
-
-/* Efeito pulsante nos botões */
-.btn-pulse {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-pulse:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10,10);
-  opacity: 0;
-  transition: transform .5s, opacity 1s;
-}
-
-.btn-pulse:active:after {
-  transform: scale(0,0);
-  opacity: .3;
-  transition: 0s;
-}
-
-/* Animações para cards */
-.detalhe-item, .service {
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform: perspective(1000px) translateZ(0);
-}
-
-.detalhe-item:hover, .service:hover {
-  transform: perspective(1000px) translateZ(20px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.05);
-}
-
-/* Animações para ícones */
-.icon-animate {
-  transition: all 0.4s ease;
-  display: inline-block;
-}
-
-.icon-animate:hover {
-  transform: scale(1.1) rotate(5deg);
-}
-
-/* Animação para a foto */
-.about-content img {
-  transition: all 0.6s ease;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-}
-
-.about-content img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-}
-
-/* CORREÇÕES PARA O PROBLEMA DE ELEMENTOS INVISÍVEIS */
-#instagram, 
-footer {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-[data-aos] {
-  pointer-events: auto !important;
-}
-
-.aos-animate {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-
-
-/* Ativa animações no mobile */
 @media (max-width: 768px) {
-  [data-aos] {
-    transition-property: opacity, transform !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
+    /* Otimização para mobile */
+    [data-aos] {
+        transition-duration: 0.5s !important;
+        animation-duration: 0.5s !important;
+    }
+    
+    /* Widget do Instagram */
+    .instagram-widget {
+        width: 100%;
+        max-width: 400px;
+        height: 500px;
+        margin: 0 auto;
+    }
+}
 
- @media (prefers-reduced-motion: reduce) {
+/* ==================== */
+/* ACESSIBILIDADE (REDUÇÃO DE MOVIMENTO) */
+/* ==================== */
+
+@media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-}
-  
-  [data-aos].aos-animate {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  
-  /* Ajuste específico para elementos que devem animar */
-  [data-aos^="fade"][data-aos^="fade"],
-  [data-aos^="zoom"][data-aos^="zoom"],
-  [data-aos^="flip"][data-aos^="flip"] {
-    opacity: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  
-  [data-aos^="fade"][data-aos^="fade"].aos-animate,
-  [data-aos^="zoom"][data-aos^="zoom"].aos-animate,
-  [data-aos^="flip"][data-aos^="flip"].aos-animate {
-    opacity: 1;
-    transform: none;
-  }
 }
