@@ -92,18 +92,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Add this to your existing DOMContentLoaded function
-const atendimentosSection = document.querySelector('#atendimentos .atendimentos-content');
-if (atendimentosSection && !document.getElementById('cta-button')) {
-  const ctaButton = document.createElement('a');
-  ctaButton.id = 'cta-button';
-  ctaButton.className = 'cta-button';
-  ctaButton.href = '#contact';
-  ctaButton.textContent = 'Agende sua consulta';
-  atendimentosSection.appendChild(ctaButton);
+    const atendimentosSection = document.querySelector('#atendimentos .atendimentos-content');
+    if (atendimentosSection && !document.getElementById('cta-button')) {
+        const ctaButton = document.createElement('a');
+        ctaButton.id = 'cta-button';
+        ctaButton.className = 'cta-button';
+        ctaButton.href = '#contact';
+        ctaButton.textContent = 'Agende sua consulta';
+        atendimentosSection.appendChild(ctaButton);
+    } // ← Fechamento faltante do if
 
     // 6. Botões pulse (com verificação e tempo ajustado)
     document.querySelectorAll('.btn-pulse').forEach(button => {
-        button.style.transitionDuration = '0.3s'; // Corrige duração
+        button.style.transitionDuration = '0.3s';
         
         button.addEventListener('click', function(e) {
             const wave = document.createElement('span');
@@ -116,16 +117,16 @@ if (atendimentosSection && !document.getElementById('cta-button')) {
                 height: `${size}px`,
                 left: `${e.clientX - rect.left - size/2}px`,
                 top: `${e.clientY - rect.top - size/2}px`,
-                animationDuration: '0.3s' // Tempo adequado
+                animationDuration: '0.3s'
             });
 
             button.appendChild(wave);
-            setTimeout(() => wave.remove(), 300); // Tempo reduzido para 0.3s
+            setTimeout(() => wave.remove(), 300);
         });
     });
     
     // Corrige durações em todos os elementos animados
-   setTimeout(() => {
+    setTimeout(() => {
         document.querySelectorAll('*').forEach(el => {
             const style = getComputedStyle(el);
             if (style.transitionDuration === '0.00001s') {
@@ -136,9 +137,8 @@ if (atendimentosSection && !document.getElementById('cta-button')) {
             }
         });
     }, 200);
-}); // ← ESTE é o fechamento CORRETO do DOMContentLoaded
+}); // ← Único fechamento do DOMContentLoaded
 
-// AGORA SIM o event listener de load, FORA do DOMContentLoaded
 window.addEventListener('load', function() {
     document.body.classList.add('fully-loaded');
     console.log('Todos recursos carregados');
